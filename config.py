@@ -165,7 +165,7 @@ def base_parser(parser):
     parser.add_argument('--attn-only', action='store_true') 
     
     # Dataset parameters
-    parser.add_argument('--data-path', required=True, type=str,
+    parser.add_argument('--data-path', default='~/Datasets/CIFAR', type=str,
                         help='dataset path')
     parser.add_argument('--data-set', default='IMNET', choices=['CIFAR', 'IMNET', 'INAT', 'INAT19'],
                         type=str, help='Image Net dataset path')
