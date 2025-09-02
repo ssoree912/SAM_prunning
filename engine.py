@@ -18,6 +18,16 @@ from utils import *
 import pruning
 from pruning import *
 
+def get_mask_dict(model):
+    """현재 모델의 mask 딕셔너리 생성"""
+    mask_dict = {}
+    for module in model.modules():
+        if hasattr(module, 'weight') and hasattr(module, 'mask'):
+            mask_dict[module.weight] = module.mask
+            if hasattr(module, 'bias') and module.bias is not None and hasattr(module, 'bias_mask'):
+                mask_dict[module.bias] = module.bias_mask
+    return mask_dict
+
 import torch.nn.functional as F
 import torch.func
 
@@ -180,7 +190,8 @@ def fine_train_one_epoch(model: torch.nn.Module, criterion:torch.nn.CrossEntropy
         if args.cosub:
             samples = torch.cat((samples,samples),dim=0)
 
-        optimizer.first_step(zero_grad=True) # 
+        mask_dict = get_mask_dict(model)
+        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) 
         with torch.cuda.amp.autocast():
            outputs = model(samples[:, 0, ...]) 
            if not args.cosub:
@@ -362,7 +373,8 @@ def train_one_epoch(model, criterion, data_loader, optimizer, device, epoch, los
 
 
 
-        optimizer.first_step(zero_grad=True) # 
+        mask_dict = get_mask_dict(model)
+        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) 
         #print("first step 실 행됨")
         # 순방향 전파 및 손실 계산
         # with torch.cuda.amp.autocast():
@@ -639,7 +651,8 @@ def train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, device, ep
         if i == 0:
             print("첫 이터레이션 준비 (FP32 Full Precision)")
             optimizer.zero_grad()
-            optimizer.first_step(zero_grad=True)
+            mask_dict = get_mask_dict(model)
+            optimizer.first_step(zero_grad=True, mask_dict=mask_dict)
             
             outputs = model(samples[:, 0, ...])
             loss = criterion(outputs, targets)
@@ -663,7 +676,8 @@ def train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, device, ep
         # --- SAM의 first_step ---
         optimizer.zero_grad()
 
-        optimizer.first_step(zero_grad=True) # 가중치 섭동
+        mask_dict = get_mask_dict(model)
+        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) 가중치 섭동
 
         with torch.cuda.amp.autocast():
             #####################이제 전체 배치에 대해(이전 배치의 새로운 뷰 + 현재 배치의 뷰 0
@@ -814,7 +828,8 @@ def fine_train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, devic
         if i == 0:
             print("첫 이터레이션 준비 (FP32 Full Precision)")
             optimizer.zero_grad()
-            optimizer.first_step(zero_grad=True)
+            mask_dict = get_mask_dict(model)
+            optimizer.first_step(zero_grad=True, mask_dict=mask_dict)
             
             outputs = model(samples[:, 0, ...])
             loss = criterion(outputs, targets)
@@ -838,7 +853,8 @@ def fine_train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, devic
         # --- SAM의 first_step ---
         optimizer.zero_grad()
 
-        optimizer.first_step(zero_grad=True) # 가중치 섭동
+        mask_dict = get_mask_dict(model)
+        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) 가중치 섭동
         
         with torch.cuda.amp.autocast():
             #####################이제 전체 배치에 대해(이전 배치의 새로운 뷰 + 현재 배치의 뷰 0

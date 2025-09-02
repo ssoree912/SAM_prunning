@@ -77,6 +77,7 @@ from pruning import *
 # Assuming config.py provides necessary arguments
 from config import get_train_args
 from SAM import SAM
+from MaskedSAM import MaskedSAM
 
 # === Helper Functions/Classes (from Script 1) ===
 
@@ -386,7 +387,7 @@ def main(args):
     print(rho)
     print()
     
-    optimizer = SAM(model.parameters(), 
+    optimizer = MaskedSAM(model.parameters(), 
                     AdamW, 
                     rho=rho,                     # SAM neighbourhood radius
                     adaptive=False,               # ASAM 여부
