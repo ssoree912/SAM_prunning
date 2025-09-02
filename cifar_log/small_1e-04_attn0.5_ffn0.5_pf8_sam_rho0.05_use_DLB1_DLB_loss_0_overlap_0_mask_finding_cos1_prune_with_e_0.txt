@@ -1,0 +1,373 @@
+--- Debug Info from cifar.py ---
+Python Executable: /opt/python/bin/python
+Virtual Environment: Not detected
+PyTorch Version (inside cifar.py): 2.3.1+cu121
+PyTorch Path (inside cifar.py): ['/home/20223204/.local/lib/python3.10/site-packages/torch']
+Timm Version (inside cifar.py): 0.4.5
+Timm Path (inside cifar.py): ['/home/20223204/.local/lib/python3.10/site-packages/timm']
+Hugging Face Hub Version (inside cifar.py): 0.33.2
+Hugging Face Hub Path (inside cifar.py): ['/usr/gatoai/python/venv/3.10/lib/python3.10/site-packages/huggingface_hub']
+--------------------------------
+| distributed init (rank 0): env://
+J115:19933:19933 [0] NCCL INFO Bootstrap : Using eth0:172.17.0.13<0>
+J115:19933:19933 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+J115:19933:19933 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.20.5+cuda12.4
+J115:19933:20075 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+J115:19933:20075 [0] NCCL INFO NET/Socket : Using [0]eth0:172.17.0.13<0>
+J115:19933:20075 [0] NCCL INFO Using non-device net plugin version 0
+J115:19933:20075 [0] NCCL INFO Using network Socket
+J115:19933:20075 [0] NCCL INFO comm 0x7f2b76472800 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 6b000 commId 0x228bf30b0722bb17 - Init START
+J115:19933:20075 [0] NCCL INFO NCCL_P2P_LEVEL set by environment to LOC
+J115:19933:20075 [0] NCCL INFO Setting affinity for GPU 0 to 08008002,00000000,20208000
+J115:19933:20075 [0] NCCL INFO comm 0x7f2b76472800 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+J115:19933:20075 [0] NCCL INFO Channel 00/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 01/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 02/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 03/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 04/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 05/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 06/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 07/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 08/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 09/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 10/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 11/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 12/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 13/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 14/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 15/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 16/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 17/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 18/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 19/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 20/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 21/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 22/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 23/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 24/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 25/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 26/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 27/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 28/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 29/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 30/32 :    0
+J115:19933:20075 [0] NCCL INFO Channel 31/32 :    0
+J115:19933:20075 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+J115:19933:20075 [0] NCCL INFO P2P Chunksize set to 131072
+J115:19933:20075 [0] NCCL INFO Connected all rings
+J115:19933:20075 [0] NCCL INFO Connected all trees
+J115:19933:20075 [0] NCCL INFO 32 coll channels, 0 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+J115:19933:20075 [0] NCCL INFO comm 0x7f2b76472800 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId 6b000 commId 0x228bf30b0722bb17 - Init COMPLETE
+Effective Arguments: Namespace(model='resnet50', input_size=224, drop=0.0, drop_path=0.1, color_jitter=0.3, aa='rand-m9-mstd0.5-inc1', smoothing=0.1, train_interpolation='bicubic', repeated_aug=True, train_mode=True, ThreeAugment=False, src=False, reprob=0.25, remode='pixel', recount=1, resplit=False, mixup=0.8, cutmix=1.0, cutmix_minmax=None, mixup_prob=1.0, mixup_switch_prob=0.5, mixup_mode='batch', cosub=False, finetune='', attn_only=False, data_path='/home/20223204/data/CIFAR100', data_set='IMNET', inat_category='name', seed=0, output_dir='./output', pin_mem=True, num_workers=10, prompt_length=1, prompt_dim=768, prompt_weight=0.1, group_size=1, attn_prune_rate=0.5, ffn_prune_rate=0.5, rho=0.05, mask_type=0, second_step_after_mask=1, random_mask_change=0, use_DLB=1, DLB_loss=0, overlap=0, T=3.0, alpha=1.0, prune_amplitude=0.5, prune_cycles=3, mask_finding_cos=1, prune_with_e=0, gpuids=[0], prune_freq=8, prune_rate=0.3, prune_imp='taylor1', mag_type='grad', model_size='small', cu_num='0', warmup=1, target_epoch=25, method='unified_qkv', batch_size=256, epochs=25, bce_loss=False, unscale_lr=False, model_ema=True, model_ema_decay=0.99996, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.05, sched='cosine', lr=0.0001, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, warmup_lr=1e-06, min_lr=1e-05, decay_epochs=30, warmup_epochs=0, cooldown_epochs=10, patience_epochs=10, decay_rate=0.1, device='cuda', checkpoint='', start_epoch=0, eval=False, eval_crop_ratio=0.875, dist_eval=False, local_rank=0, distributed=True, world_size=1, dist_url='env://', rank=0, gpu=0, dist_backend='nccl')
+Files already downloaded and verified
+Files already downloaded and verified
+Creating model: vit_small_patch16_224
+Loading checkpoint: checkpoint/deit_small_patch16_224-cd65a155.pth
+Removed classification head keys from checkpoint: ['head.weight', 'head.bias']
+Checkpoint loading report (missing keys should include head weights):
+  Missing keys: ['cls_token', 'pos_embed', 'patch_embed.proj.weight', 'patch_embed.proj.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.fc1.weight', 'blocks.0.mlp.fc1.bias', 'blocks.0.mlp.fc2.weight', 'blocks.0.mlp.fc2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.fc1.weight', 'blocks.1.mlp.fc1.bias', 'blocks.1.mlp.fc2.weight', 'blocks.1.mlp.fc2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.fc1.weight', 'blocks.2.mlp.fc1.bias', 'blocks.2.mlp.fc2.weight', 'blocks.2.mlp.fc2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.fc1.weight', 'blocks.3.mlp.fc1.bias', 'blocks.3.mlp.fc2.weight', 'blocks.3.mlp.fc2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.fc1.weight', 'blocks.4.mlp.fc1.bias', 'blocks.4.mlp.fc2.weight', 'blocks.4.mlp.fc2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.fc1.weight', 'blocks.5.mlp.fc1.bias', 'blocks.5.mlp.fc2.weight', 'blocks.5.mlp.fc2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.fc1.weight', 'blocks.6.mlp.fc1.bias', 'blocks.6.mlp.fc2.weight', 'blocks.6.mlp.fc2.bias', 'blocks.7.norm1.weight', 'blocks.7.norm1.bias', 'blocks.7.attn.qkv.weight', 'blocks.7.attn.proj.weight', 'blocks.7.attn.proj.bias', 'blocks.7.norm2.weight', 'blocks.7.norm2.bias', 'blocks.7.mlp.fc1.weight', 'blocks.7.mlp.fc1.bias', 'blocks.7.mlp.fc2.weight', 'blocks.7.mlp.fc2.bias', 'norm.weight', 'norm.bias', 'head.weight', 'head.bias']
+  Unexpected keys: []
+Replacing Linear layers with MaskLinear
+Setting Dropout to 0.0
+완료 ㅋㅋ
+Number of trainable params: 48080740
+Scaled learning rate to: 0.0001
+args.second_step_after_mask
+1
+SAM rho 지정 바로 아래줄
+0.05
+
+스케줄러: ,  <torch.optim.lr_scheduler.CosineAnnealingLR object at 0x7f2b866ad7b0>
+Initializing previous masks...
+  Initialized prev_mask for: model.blocks.0.attn.qkv
+  Initialized prev_mask for: model.blocks.0.attn.proj
+  Initialized prev_mask for: model.blocks.0.mlp.fc1
+  Initialized prev_mask for: model.blocks.0.mlp.fc2
+  Initialized prev_mask for: model.blocks.1.attn.qkv
+  Initialized prev_mask for: model.blocks.1.attn.proj
+  Initialized prev_mask for: model.blocks.1.mlp.fc1
+  Initialized prev_mask for: model.blocks.1.mlp.fc2
+  Initialized prev_mask for: model.blocks.2.attn.qkv
+  Initialized prev_mask for: model.blocks.2.attn.proj
+  Initialized prev_mask for: model.blocks.2.mlp.fc1
+  Initialized prev_mask for: model.blocks.2.mlp.fc2
+  Initialized prev_mask for: model.blocks.3.attn.qkv
+  Initialized prev_mask for: model.blocks.3.attn.proj
+  Initialized prev_mask for: model.blocks.3.mlp.fc1
+  Initialized prev_mask for: model.blocks.3.mlp.fc2
+  Initialized prev_mask for: model.blocks.4.attn.qkv
+  Initialized prev_mask for: model.blocks.4.attn.proj
+  Initialized prev_mask for: model.blocks.4.mlp.fc1
+  Initialized prev_mask for: model.blocks.4.mlp.fc2
+  Initialized prev_mask for: model.blocks.5.attn.qkv
+  Initialized prev_mask for: model.blocks.5.attn.proj
+  Initialized prev_mask for: model.blocks.5.mlp.fc1
+  Initialized prev_mask for: model.blocks.5.mlp.fc2
+  Initialized prev_mask for: model.blocks.6.attn.qkv
+  Initialized prev_mask for: model.blocks.6.attn.proj
+  Initialized prev_mask for: model.blocks.6.mlp.fc1
+  Initialized prev_mask for: model.blocks.6.mlp.fc2
+  Initialized prev_mask for: model.blocks.7.attn.qkv
+  Initialized prev_mask for: model.blocks.7.attn.proj
+  Initialized prev_mask for: model.blocks.7.mlp.fc1
+  Initialized prev_mask for: model.blocks.7.mlp.fc2
+  Initialized prev_mask for: model.head
+Start training for 25 epochs
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [0]  [  0/195]  eta: 0:10:43    time: 3.2995  data: 1.4170  max mem: 20936
+Epoch: [0]  [100/195]  eta: 0:01:02  loss: 0.8984 (1.8365)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)  time: 0.6148  data: 0.0011  max mem: 30027
+Epoch: [0]  [194/195]  eta: 0:00:00  loss: 0.6153 (1.2810)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)  time: 0.5992  data: 0.0011  max mem: 30028
+Epoch: [0] Total time: 0:02:03 (0.6335 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.6153 (1.2810)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)
+Epoch 1/25
+  Current learning rate: 0.000100
+  Attention Sparsity Target: 0.0
+  FFN Sparsity Target: 0.0
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:45  loss: 0.6195 (0.6195)  acc1: 82.0312 (82.0312)  acc5: 97.6562 (97.6562)  time: 1.1368  data: 0.8428  max mem: 30028
+Test:  [10/40]  eta: 0:00:10  loss: 0.6208 (0.6213)  acc1: 80.4688 (81.2855)  acc5: 97.6562 (97.3366)  time: 0.3359  data: 0.1844  max mem: 30028
+Test:  [20/40]  eta: 0:00:06  loss: 0.6270 (0.6190)  acc1: 80.8594 (81.6964)  acc5: 97.6562 (97.4516)  time: 0.2584  data: 0.1256  max mem: 30028
+Test:  [30/40]  eta: 0:00:02  loss: 0.6087 (0.6172)  acc1: 81.6406 (81.6154)  acc5: 98.0469 (97.6058)  time: 0.2492  data: 0.1209  max mem: 30028
+Test:  [39/40]  eta: 0:00:00  loss: 0.5945 (0.6146)  acc1: 82.0312 (81.9200)  acc5: 98.0469 (97.6000)  time: 0.2246  data: 0.1009  max mem: 30028
+Test: Total time: 0:00:10 (0.2626 s / it)
+* Acc@1 81.920 Acc@5 97.600 loss 0.615
+  Accuracy on CIFAR-100 test set: 81.92%
+  Max accuracy so far: 81.92%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [1]  [  0/195]  eta: 0:08:22    time: 2.5774  data: 1.4071  max mem: 30028
+Epoch: [1]  [100/195]  eta: 0:01:09  loss: 0.5289 (0.4727)  lr: 0.0001 (0.0001)  attn_sparsity: 0.1778 (0.0996)  ffn_sparsity: 0.1778 (0.0996)  mask_changes: 0.0000 (0.0000)  time: 0.6799  data: 0.0014  max mem: 30387
+Epoch: [1]  [194/195]  eta: 0:00:00  loss: 0.6636 (0.5521)  lr: 0.0001 (0.0001)  attn_sparsity: 0.3438 (0.1879)  ffn_sparsity: 0.3438 (0.1879)  mask_changes: 0.0000 (0.0000)  time: 0.7350  data: 0.0016  max mem: 30387
+Epoch: [1] Total time: 0:02:20 (0.7223 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.6636 (0.5521)  lr: 0.0001 (0.0001)  attn_sparsity: 0.3438 (0.1879)  ffn_sparsity: 0.3438 (0.1879)  mask_changes: 0.0000 (0.0000)
+Epoch 2/25
+  Current learning rate: 0.000098
+  Attention Sparsity Target: 0.3592396063567072
+  FFN Sparsity Target: 0.3592396063567072
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:32  loss: 0.7097 (0.7097)  acc1: 83.5938 (83.5938)  acc5: 94.9219 (94.9219)  time: 0.8172  data: 0.6681  max mem: 30387
+Test:  [10/40]  eta: 0:00:08  loss: 0.7830 (0.7464)  acc1: 78.9062 (79.4034)  acc5: 95.7031 (95.9872)  time: 0.2990  data: 0.1588  max mem: 30387
+Test:  [20/40]  eta: 0:00:05  loss: 0.7529 (0.7398)  acc1: 78.9062 (79.1109)  acc5: 96.0938 (96.2984)  time: 0.2522  data: 0.1089  max mem: 30387
+Test:  [30/40]  eta: 0:00:02  loss: 0.7365 (0.7345)  acc1: 78.5156 (79.0953)  acc5: 96.4844 (96.3458)  time: 0.2555  data: 0.1068  max mem: 30387
+Test:  [39/40]  eta: 0:00:00  loss: 0.6815 (0.7197)  acc1: 79.6875 (79.3400)  acc5: 96.4844 (96.2800)  time: 0.2395  data: 0.0960  max mem: 30387
+Test: Total time: 0:00:10 (0.2598 s / it)
+* Acc@1 79.340 Acc@5 96.280 loss 0.720
+  Accuracy on CIFAR-100 test set: 79.34%
+  Max accuracy so far: 81.92%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [2]  [  0/195]  eta: 0:08:46    time: 2.6978  data: 1.5049  max mem: 30387
+Epoch: [2]  [100/195]  eta: 0:01:08  loss: 0.7453 (0.5947)  lr: 0.0001 (0.0001)  attn_sparsity: 0.4733 (0.4267)  ffn_sparsity: 0.4733 (0.4267)  mask_changes: 0.0000 (0.0000)  time: 0.7088  data: 0.0016  max mem: 30388
+Epoch: [2]  [194/195]  eta: 0:00:00  loss: 0.6711 (0.6356)  lr: 0.0001 (0.0001)  attn_sparsity: 0.5355 (0.4701)  ffn_sparsity: 0.5355 (0.4701)  mask_changes: 0.0000 (0.0000)  time: 0.6806  data: 0.0013  max mem: 30388
+Epoch: [2] Total time: 0:02:20 (0.7185 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.6711 (0.6356)  lr: 0.0001 (0.0001)  attn_sparsity: 0.5355 (0.4701)  ffn_sparsity: 0.5355 (0.4701)  mask_changes: 0.0000 (0.0000)
+Epoch 3/25
+  Current learning rate: 0.000096
+  Attention Sparsity Target: 0.5383079319788269
+  FFN Sparsity Target: 0.5383079319788269
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:31  loss: 0.8649 (0.8649)  acc1: 73.8281 (73.8281)  acc5: 94.9219 (94.9219)  time: 0.7903  data: 0.6545  max mem: 30388
+Test:  [10/40]  eta: 0:00:09  loss: 0.8649 (0.8275)  acc1: 75.7812 (75.7812)  acc5: 94.9219 (94.8509)  time: 0.3091  data: 0.1712  max mem: 30388
+Test:  [20/40]  eta: 0:00:05  loss: 0.8393 (0.8460)  acc1: 75.3906 (75.0372)  acc5: 94.9219 (94.9963)  time: 0.2640  data: 0.1219  max mem: 30388
+Test:  [30/40]  eta: 0:00:02  loss: 0.8298 (0.8348)  acc1: 75.3906 (75.2772)  acc5: 95.7031 (95.2747)  time: 0.2524  data: 0.1083  max mem: 30388
+Test:  [39/40]  eta: 0:00:00  loss: 0.7914 (0.8131)  acc1: 76.9531 (75.8100)  acc5: 95.7031 (95.1700)  time: 0.2195  data: 0.0868  max mem: 30388
+Test: Total time: 0:00:10 (0.2570 s / it)
+* Acc@1 75.810 Acc@5 95.170 loss 0.813
+  Accuracy on CIFAR-100 test set: 75.81%
+  Max accuracy so far: 81.92%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [3]  [  0/195]  eta: 0:07:28    time: 2.3023  data: 1.1673  max mem: 30388
+Epoch: [3]  [100/195]  eta: 0:01:07  loss: 0.4155 (0.4465)  lr: 0.0001 (0.0001)  attn_sparsity: 0.5299 (0.5381)  ffn_sparsity: 0.5299 (0.5381)  mask_changes: 0.0000 (0.0000)  time: 0.6983  data: 0.0024  max mem: 30388
+Epoch: [3]  [194/195]  eta: 0:00:00  loss: 0.3737 (0.4307)  lr: 0.0001 (0.0001)  attn_sparsity: 0.4595 (0.5159)  ffn_sparsity: 0.4595 (0.5159)  mask_changes: 0.0000 (0.0000)  time: 0.6940  data: 0.0012  max mem: 30388
+Epoch: [3] Total time: 0:02:16 (0.6983 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.3737 (0.4307)  lr: 0.0001 (0.0001)  attn_sparsity: 0.4595 (0.5159)  ffn_sparsity: 0.4595 (0.5159)  mask_changes: 0.0000 (0.0000)
+Epoch 4/25
+  Current learning rate: 0.000094
+  Attention Sparsity Target: 0.44972938749089886
+  FFN Sparsity Target: 0.44972938749089886
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:36  loss: 0.5944 (0.5944)  acc1: 83.5938 (83.5938)  acc5: 96.8750 (96.8750)  time: 0.9048  data: 0.7568  max mem: 30388
+Test:  [10/40]  eta: 0:00:09  loss: 0.7253 (0.6991)  acc1: 78.9062 (79.9361)  acc5: 96.0938 (96.3423)  time: 0.3263  data: 0.1781  max mem: 30388
+Test:  [20/40]  eta: 0:00:06  loss: 0.7253 (0.7094)  acc1: 78.5156 (79.2411)  acc5: 96.4844 (96.5588)  time: 0.2747  data: 0.1337  max mem: 30388
+Test:  [30/40]  eta: 0:00:02  loss: 0.6735 (0.7016)  acc1: 78.5156 (79.2843)  acc5: 97.2656 (96.6986)  time: 0.2750  data: 0.1442  max mem: 30388
+Test:  [39/40]  eta: 0:00:00  loss: 0.6639 (0.6830)  acc1: 79.6875 (79.7000)  acc5: 97.2656 (96.7000)  time: 0.2646  data: 0.1421  max mem: 30388
+Test: Total time: 0:00:11 (0.2813 s / it)
+* Acc@1 79.700 Acc@5 96.700 loss 0.683
+  Accuracy on CIFAR-100 test set: 79.70%
+  Max accuracy so far: 81.92%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [4]  [  0/195]  eta: 0:08:15    time: 2.5419  data: 1.4046  max mem: 30388
+Epoch: [4]  [100/195]  eta: 0:01:07  loss: 0.1977 (0.2142)  lr: 0.0001 (0.0001)  attn_sparsity: 0.3274 (0.3848)  ffn_sparsity: 0.3274 (0.3848)  mask_changes: 0.0000 (0.0000)  time: 0.6818  data: 0.0015  max mem: 30388
+Epoch: [4]  [194/195]  eta: 0:00:00  loss: 0.2314 (0.2185)  lr: 0.0001 (0.0001)  attn_sparsity: 0.1680 (0.3114)  ffn_sparsity: 0.1680 (0.3114)  mask_changes: 0.0000 (0.0000)  time: 0.7356  data: 0.0015  max mem: 30388
+Epoch: [4] Total time: 0:02:18 (0.7102 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.2314 (0.2185)  lr: 0.0001 (0.0001)  attn_sparsity: 0.1680 (0.3114)  ffn_sparsity: 0.1680 (0.3114)  mask_changes: 0.0000 (0.0000)
+Epoch 5/25
+  Current learning rate: 0.000090
+  Attention Sparsity Target: 0.15173170427179017
+  FFN Sparsity Target: 0.15173170427179017
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:38  loss: 0.6576 (0.6576)  acc1: 82.4219 (82.4219)  acc5: 96.0938 (96.0938)  time: 0.9626  data: 0.8202  max mem: 30388
+Test:  [10/40]  eta: 0:00:09  loss: 0.6786 (0.6707)  acc1: 80.8594 (81.6051)  acc5: 96.0938 (96.4844)  time: 0.3307  data: 0.1871  max mem: 30388
+Test:  [20/40]  eta: 0:00:05  loss: 0.6786 (0.6915)  acc1: 80.0781 (80.4688)  acc5: 96.8750 (96.6332)  time: 0.2552  data: 0.1118  max mem: 30388
+Test:  [30/40]  eta: 0:00:02  loss: 0.6776 (0.6860)  acc1: 80.0781 (80.3931)  acc5: 96.8750 (96.7238)  time: 0.2394  data: 0.1006  max mem: 30388
+Test:  [39/40]  eta: 0:00:00  loss: 0.6392 (0.6624)  acc1: 82.0312 (80.9100)  acc5: 96.8750 (96.7100)  time: 0.2411  data: 0.1111  max mem: 30388
+Test: Total time: 0:00:10 (0.2676 s / it)
+* Acc@1 80.910 Acc@5 96.710 loss 0.662
+  Accuracy on CIFAR-100 test set: 80.91%
+  Max accuracy so far: 81.92%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [5]  [  0/195]  eta: 0:08:05    time: 2.4895  data: 1.2758  max mem: 30388
+Epoch: [5]  [100/195]  eta: 0:01:08  loss: 0.1174 (0.1191)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0624)  ffn_sparsity: 0.0000 (0.0624)  mask_changes: 0.0000 (0.0000)  time: 0.6677  data: 0.0014  max mem: 30388
+Epoch: [5]  [194/195]  eta: 0:00:00  loss: 0.1279 (0.1238)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0321)  ffn_sparsity: 0.0000 (0.0321)  mask_changes: 0.0000 (0.0000)  time: 0.6791  data: 0.0027  max mem: 30388
+Epoch: [5] Total time: 0:02:16 (0.6996 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.1279 (0.1238)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0321)  ffn_sparsity: 0.0000 (0.0321)  mask_changes: 0.0000 (0.0000)
+Epoch 6/25
+  Current learning rate: 0.000086
+  Attention Sparsity Target: 0.0
+  FFN Sparsity Target: 0.0
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:36  loss: 0.6727 (0.6727)  acc1: 83.5938 (83.5938)  acc5: 96.8750 (96.8750)  time: 0.9020  data: 0.7469  max mem: 30388
+Test:  [10/40]  eta: 0:00:09  loss: 0.6969 (0.6748)  acc1: 83.5938 (82.8835)  acc5: 96.4844 (96.3068)  time: 0.3246  data: 0.1778  max mem: 30388
+Test:  [20/40]  eta: 0:00:05  loss: 0.6821 (0.6880)  acc1: 82.4219 (81.8080)  acc5: 96.4844 (96.5030)  time: 0.2558  data: 0.1089  max mem: 30388
+Test:  [30/40]  eta: 0:00:02  loss: 0.6468 (0.6805)  acc1: 80.8594 (81.3760)  acc5: 97.2656 (96.6734)  time: 0.2489  data: 0.1017  max mem: 30388
+Test:  [39/40]  eta: 0:00:00  loss: 0.6319 (0.6570)  acc1: 82.4219 (81.6900)  acc5: 96.4844 (96.6200)  time: 0.2474  data: 0.1061  max mem: 30388
+Test: Total time: 0:00:10 (0.2696 s / it)
+* Acc@1 81.690 Acc@5 96.620 loss 0.657
+  Accuracy on CIFAR-100 test set: 81.69%
+  Max accuracy so far: 81.92%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [6]  [  0/195]  eta: 0:08:26    time: 2.5990  data: 1.4420  max mem: 30388
+Epoch: [6]  [100/195]  eta: 0:01:07  loss: 0.0719 (0.0756)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)  mask_changes: 0.0000 (0.0000)  time: 0.6716  data: 0.0013  max mem: 30388
+Epoch: [6]  [194/195]  eta: 0:00:00  loss: 0.0825 (0.0767)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)  mask_changes: 0.0000 (0.0000)  time: 0.6744  data: 0.0012  max mem: 30388
+Epoch: [6] Total time: 0:02:15 (0.6940 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.0825 (0.0767)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)  mask_changes: 0.0000 (0.0000)
+Epoch 7/25
+  Current learning rate: 0.000082
+  Attention Sparsity Target: 0.0
+  FFN Sparsity Target: 0.0
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:37  loss: 0.6295 (0.6295)  acc1: 84.7656 (84.7656)  acc5: 97.2656 (97.2656)  time: 0.9373  data: 0.7880  max mem: 30388
+Test:  [10/40]  eta: 0:00:09  loss: 0.6896 (0.6861)  acc1: 83.2031 (82.6349)  acc5: 96.8750 (96.9460)  time: 0.3198  data: 0.1918  max mem: 30388
+Test:  [20/40]  eta: 0:00:05  loss: 0.6896 (0.7026)  acc1: 81.6406 (81.6406)  acc5: 96.4844 (96.9308)  time: 0.2500  data: 0.1238  max mem: 30388
+Test:  [30/40]  eta: 0:00:02  loss: 0.6992 (0.6982)  acc1: 81.2500 (81.6406)  acc5: 97.2656 (96.9758)  time: 0.2511  data: 0.1180  max mem: 30388
+Test:  [39/40]  eta: 0:00:00  loss: 0.6594 (0.6747)  acc1: 83.2031 (81.9600)  acc5: 97.2656 (96.9500)  time: 0.2413  data: 0.1048  max mem: 30388
+Test: Total time: 0:00:10 (0.2639 s / it)
+* Acc@1 81.960 Acc@5 96.950 loss 0.675
+  Accuracy on CIFAR-100 test set: 81.96%
+  Max accuracy so far: 81.96%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [7]  [  0/195]  eta: 0:08:33    time: 2.6346  data: 1.4290  max mem: 30388
+Epoch: [7]  [100/195]  eta: 0:01:07  loss: 0.0502 (0.0525)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)  mask_changes: 0.0000 (0.0000)  time: 0.6790  data: 0.0012  max mem: 30388
+Epoch: [7]  [194/195]  eta: 0:00:00  loss: 0.0534 (0.0513)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)  mask_changes: 0.0000 (0.0000)  time: 0.6766  data: 0.0012  max mem: 30388
+Epoch: [7] Total time: 0:02:14 (0.6877 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.0534 (0.0513)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)  mask_changes: 0.0000 (0.0000)
+Epoch 8/25
+  Current learning rate: 0.000077
+  Attention Sparsity Target: 0.0
+  FFN Sparsity Target: 0.0
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:38  loss: 0.6433 (0.6433)  acc1: 85.5469 (85.5469)  acc5: 96.0938 (96.0938)  time: 0.9591  data: 0.8135  max mem: 30388
+Test:  [10/40]  eta: 0:00:09  loss: 0.7290 (0.7192)  acc1: 82.0312 (83.3097)  acc5: 96.0938 (96.2358)  time: 0.3333  data: 0.1896  max mem: 30388
+Test:  [20/40]  eta: 0:00:06  loss: 0.6905 (0.7252)  acc1: 81.6406 (82.2545)  acc5: 96.4844 (96.4472)  time: 0.2679  data: 0.1261  max mem: 30388
+Test:  [30/40]  eta: 0:00:02  loss: 0.6841 (0.7138)  acc1: 82.0312 (82.0565)  acc5: 96.8750 (96.6356)  time: 0.2460  data: 0.1087  max mem: 30388
+Test:  [39/40]  eta: 0:00:00  loss: 0.6586 (0.6880)  acc1: 82.4219 (82.3300)  acc5: 96.8750 (96.7000)  time: 0.2206  data: 0.0923  max mem: 30388
+Test: Total time: 0:00:10 (0.2607 s / it)
+* Acc@1 82.330 Acc@5 96.700 loss 0.688
+  Accuracy on CIFAR-100 test set: 82.33%
+  Max accuracy so far: 82.33%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [8]  [  0/195]  eta: 0:07:43    time: 2.3767  data: 1.2287  max mem: 30388
+Epoch: [8]  [100/195]  eta: 0:01:07  loss: 0.0441 (0.0368)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0000)  ffn_sparsity: 0.0000 (0.0000)  mask_changes: 0.0000 (0.0000)  time: 0.6744  data: 0.0017  max mem: 30388
+Epoch: [8]  [194/195]  eta: 0:00:00  loss: 0.0378 (0.0375)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0005)  ffn_sparsity: 0.0000 (0.0005)  mask_changes: 0.0000 (0.0000)  time: 0.6834  data: 0.0020  max mem: 30388
+Epoch: [8] Total time: 0:02:16 (0.6994 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.0378 (0.0375)  lr: 0.0001 (0.0001)  attn_sparsity: 0.0000 (0.0005)  ffn_sparsity: 0.0000 (0.0005)  mask_changes: 0.0000 (0.0000)
+Epoch 9/25
+  Current learning rate: 0.000071
+  Attention Sparsity Target: 0.017957712969387085
+  FFN Sparsity Target: 0.017957712969387085
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:38  loss: 0.6590 (0.6590)  acc1: 84.7656 (84.7656)  acc5: 96.4844 (96.4844)  time: 0.9567  data: 0.8069  max mem: 30388
+Test:  [10/40]  eta: 0:00:09  loss: 0.7719 (0.7210)  acc1: 82.4219 (82.9190)  acc5: 96.0938 (96.4489)  time: 0.3304  data: 0.1882  max mem: 30388
+Test:  [20/40]  eta: 0:00:05  loss: 0.7719 (0.7349)  acc1: 81.6406 (82.2173)  acc5: 96.0938 (96.5402)  time: 0.2669  data: 0.1267  max mem: 30388
+Test:  [30/40]  eta: 0:00:02  loss: 0.7224 (0.7260)  acc1: 81.6406 (82.2077)  acc5: 96.4844 (96.5978)  time: 0.2584  data: 0.1195  max mem: 30388
+Test:  [39/40]  eta: 0:00:00  loss: 0.6755 (0.6997)  acc1: 82.8125 (82.5300)  acc5: 96.8750 (96.6900)  time: 0.2296  data: 0.0970  max mem: 30388
+Test: Total time: 0:00:10 (0.2651 s / it)
+* Acc@1 82.530 Acc@5 96.690 loss 0.700
+  Accuracy on CIFAR-100 test set: 82.53%
+  Max accuracy so far: 82.53%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [9]  [  0/195]  eta: 0:07:57    time: 2.4489  data: 1.2485  max mem: 30388
+Epoch: [9]  [100/195]  eta: 0:01:07  loss: 0.0253 (0.0255)  lr: 0.0001 (0.0001)  attn_sparsity: 0.1992 (0.1192)  ffn_sparsity: 0.1992 (0.1192)  mask_changes: 0.0000 (0.0000)  time: 0.6481  data: 0.0011  max mem: 30389
+Epoch: [9]  [194/195]  eta: 0:00:00  loss: 0.0231 (0.0267)  lr: 0.0001 (0.0001)  attn_sparsity: 0.3843 (0.2134)  ffn_sparsity: 0.3843 (0.2134)  mask_changes: 0.0000 (0.0000)  time: 0.6800  data: 0.0011  max mem: 30389
+Epoch: [9] Total time: 0:02:14 (0.6912 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.0231 (0.0267)  lr: 0.0001 (0.0001)  attn_sparsity: 0.3843 (0.2134)  ffn_sparsity: 0.3843 (0.2134)  mask_changes: 0.0000 (0.0000)
+Epoch 10/25
+  Current learning rate: 0.000065
+  Attention Sparsity Target: 0.4027338491671288
+  FFN Sparsity Target: 0.4027338491671288
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:37  loss: 0.6381 (0.6381)  acc1: 84.7656 (84.7656)  acc5: 96.0938 (96.0938)  time: 0.9369  data: 0.7879  max mem: 30389
+Test:  [10/40]  eta: 0:00:09  loss: 0.7340 (0.7186)  acc1: 82.4219 (82.6705)  acc5: 96.0938 (96.3778)  time: 0.3313  data: 0.1884  max mem: 30389
+Test:  [20/40]  eta: 0:00:05  loss: 0.7340 (0.7290)  acc1: 82.0312 (82.1615)  acc5: 96.4844 (96.5030)  time: 0.2536  data: 0.1104  max mem: 30389
+Test:  [30/40]  eta: 0:00:02  loss: 0.6877 (0.7165)  acc1: 82.0312 (82.2707)  acc5: 96.8750 (96.6608)  time: 0.2275  data: 0.0832  max mem: 30389
+Test:  [39/40]  eta: 0:00:00  loss: 0.6825 (0.6852)  acc1: 83.9844 (82.7200)  acc5: 97.2656 (96.7700)  time: 0.2090  data: 0.0720  max mem: 30389
+Test: Total time: 0:00:10 (0.2509 s / it)
+* Acc@1 82.720 Acc@5 96.770 loss 0.685
+  Accuracy on CIFAR-100 test set: 82.72%
+  Max accuracy so far: 82.72%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [10]  [  0/195]  eta: 0:08:00    time: 2.4623  data: 1.2502  max mem: 30389
+Epoch: [10]  [100/195]  eta: 0:01:06  loss: 0.0287 (0.0220)  lr: 0.0001 (0.0001)  attn_sparsity: 0.5510 (0.4885)  ffn_sparsity: 0.5510 (0.4885)  mask_changes: 0.0000 (0.0000)  time: 0.6653  data: 0.0012  max mem: 30389
+Epoch: [10]  [194/195]  eta: 0:00:00  loss: 0.5307 (0.1462)  lr: 0.0001 (0.0001)  attn_sparsity: 0.6593 (0.5529)  ffn_sparsity: 0.6593 (0.5529)  mask_changes: 0.0000 (0.0000)  time: 0.6735  data: 0.0011  max mem: 30389
+Epoch: [10] Total time: 0:02:12 (0.6820 s / it)
+Mask changes: 0
+Averaged stats: loss: 0.5307 (0.1462)  lr: 0.0001 (0.0001)  attn_sparsity: 0.6593 (0.5529)  ffn_sparsity: 0.6593 (0.5529)  mask_changes: 0.0000 (0.0000)
+Epoch 11/25
+  Current learning rate: 0.000059
+  Attention Sparsity Target: 0.6674003773011228
+  FFN Sparsity Target: 0.6674003773011228
+  Mask Changes: 0
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:40  loss: 0.9434 (0.9434)  acc1: 74.2188 (74.2188)  acc5: 93.3594 (93.3594)  time: 1.0162  data: 0.8557  max mem: 30389
+Test:  [10/40]  eta: 0:00:09  loss: 1.0363 (1.0193)  acc1: 72.6562 (72.7983)  acc5: 93.3594 (92.9688)  time: 0.3325  data: 0.1874  max mem: 30389
+Test:  [20/40]  eta: 0:00:05  loss: 1.0363 (1.0115)  acc1: 71.4844 (71.9494)  acc5: 92.9688 (93.3966)  time: 0.2530  data: 0.1069  max mem: 30389
+Test:  [30/40]  eta: 0:00:02  loss: 0.9607 (1.0108)  acc1: 72.6562 (72.3160)  acc5: 92.9688 (93.3342)  time: 0.2279  data: 0.0810  max mem: 30389
+Test:  [39/40]  eta: 0:00:00  loss: 0.9362 (0.9738)  acc1: 73.4375 (73.0200)  acc5: 93.3594 (93.4200)  time: 0.2258  data: 0.0858  max mem: 30389
+Test: Total time: 0:00:10 (0.2598 s / it)
+* Acc@1 73.020 Acc@5 93.420 loss 0.974
+  Accuracy on CIFAR-100 test set: 73.02%
+  Max accuracy so far: 82.72%
+train 전에 set mask type0 변경
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [11]  [  0/195]  eta: 0:07:33    time: 2.3239  data: 1.1511  max mem: 30389
+Epoch: [11]  [100/195]  eta: 0:01:08  loss: 0.5234 (0.5472)  lr: 0.0001 (0.0001)  attn_sparsity: 0.7081 (0.6945)  ffn_sparsity: 0.7081 (0.6945)  mask_changes: 0.0000 (0.0000)  time: 0.6912  data: 0.0015  max mem: 30389

@@ -1,0 +1,1715 @@
+| distributed init (rank 0): env://
+J115:128150:128150 [0] NCCL INFO Bootstrap : Using eth0:172.17.0.13<0>
+J115:128150:128150 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+J115:128150:128150 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.20.5+cuda12.4
+J115:128150:128164 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+J115:128150:128164 [0] NCCL INFO NET/Socket : Using [0]eth0:172.17.0.13<0>
+J115:128150:128164 [0] NCCL INFO Using non-device net plugin version 0
+J115:128150:128164 [0] NCCL INFO Using network Socket
+J115:128150:128164 [0] NCCL INFO comm 0x7fd4c2228000 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId e5000 commId 0x2d76791ea581cc0f - Init START
+J115:128150:128164 [0] NCCL INFO NCCL_P2P_LEVEL set by environment to LOC
+J115:128150:128164 [0] NCCL INFO Setting affinity for GPU 0 to 0400,00000000,01101401,00000000
+J115:128150:128164 [0] NCCL INFO comm 0x7fd4c2228000 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+J115:128150:128164 [0] NCCL INFO Channel 00/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 01/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 02/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 03/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 04/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 05/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 06/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 07/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 08/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 09/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 10/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 11/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 12/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 13/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 14/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 15/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 16/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 17/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 18/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 19/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 20/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 21/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 22/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 23/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 24/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 25/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 26/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 27/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 28/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 29/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 30/32 :    0
+J115:128150:128164 [0] NCCL INFO Channel 31/32 :    0
+J115:128150:128164 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+J115:128150:128164 [0] NCCL INFO P2P Chunksize set to 131072
+J115:128150:128164 [0] NCCL INFO Connected all rings
+J115:128150:128164 [0] NCCL INFO Connected all trees
+J115:128150:128164 [0] NCCL INFO 32 coll channels, 0 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+J115:128150:128164 [0] NCCL INFO comm 0x7fd4c2228000 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId e5000 commId 0x2d76791ea581cc0f - Init COMPLETE
+Effective Arguments: Namespace(model='resnet50', input_size=224, drop=0.0, drop_path=0.1, color_jitter=0.3, aa='rand-m9-mstd0.5-inc1', smoothing=0.1, train_interpolation='bicubic', repeated_aug=True, train_mode=True, ThreeAugment=False, src=False, reprob=0.25, remode='pixel', recount=1, resplit=False, mixup=0.8, cutmix=1.0, cutmix_minmax=None, mixup_prob=1.0, mixup_switch_prob=0.5, mixup_mode='batch', cosub=False, finetune='', attn_only=False, data_path='/home/20223204/data/CIFAR100', data_set='IMNET', inat_category='name', seed=0, output_dir='./output', pin_mem=True, num_workers=10, prompt_length=10, prompt_dim=768, prompt_weight=0.1, group_size=1, attn_prune_rate=0.5, ffn_prune_rate=0.5, rho=0.0, mask_type=0, second_step_after_mask=1, random_mask_change=0, use_DLB=1, DLB_loss=1, overlap=0, T=3.0, alpha=1.0, prune_amplitude=0.1, prune_cycles=4, mask_finding_cos=0, gpuids=[0], prune_freq=8, prune_rate=0.3, prune_imp='taylor1', mag_type='grad', model_size='small', cu_num='0', warmup=151, target_epoch=-1, method='unified_qkv', batch_size=256, epochs=75, bce_loss=False, unscale_lr=False, model_ema=True, model_ema_decay=0.99996, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.05, sched='cosine', lr=0.0001, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, warmup_lr=1e-06, min_lr=1e-05, decay_epochs=30, warmup_epochs=0, cooldown_epochs=10, patience_epochs=10, decay_rate=0.1, device='cuda', checkpoint='cifar100_epoch25_5e-05_small_attn0.5_ffn0.5_8_sam_rho0.0_use_DLB1_DLB_loss_1_overlap_0_mask_finding_cos_0.pth', start_epoch=0, eval=False, eval_crop_ratio=0.875, dist_eval=False, local_rank=0, distributed=True, world_size=1, dist_url='env://', rank=0, gpu=0, dist_backend='nccl')
+Files already downloaded and verified
+Files already downloaded and verified
+dataloader_
+Creating model: vit_small_patch16_224
+SAM rho 지정 바로 아래줄
+0.0
+
+Start training for 75 epochs
+첫 이터레이션 준비 (FP32 Full Precision)
+first sum 개수
+0
+second sum 개수
+0
+Epoch: [0]  [  0/195]  eta: 0:11:35    time: 3.5654  data: 1.8744  max mem: 21119
+first sum 개수
+104
+🔥🔥🔥 WARNING: Gradient contains INF for param shape: torch.Size([2304, 768]) 🔥🔥🔥
+🔥🔥🔥 WARNING: Gradient contains INF for param shape: torch.Size([2304, 768]) 🔥🔥🔥
+🔥🔥🔥 WARNING: Gradient contains INF for param shape: torch.Size([2304, 768]) 🔥🔥🔥
+second sum 개수
+101
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+Epoch: [0]  [100/195]  eta: 0:01:19  loss: 0.2947 (0.4626)  lr: 0.0001 (0.0001)  time: 0.7707  data: 0.0015  max mem: 43366
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+Epoch: [0]  [194/195]  eta: 0:00:00  loss: 0.2530 (0.3689)  lr: 0.0001 (0.0001)  time: 0.8081  data: 0.0013  max mem: 43366
+Epoch: [0] Total time: 0:02:38 (0.8143 s / it)
+Averaged stats: loss: 0.2530 (0.3689)  lr: 0.0001 (0.0001)
+Current learning rate: 0.0001
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:01:00  loss: 0.7048 (0.7048)  acc1: 81.6406 (81.6406)  acc5: 96.4844 (96.4844)  time: 1.5174  data: 1.3342  max mem: 43366
+Test:  [10/40]  eta: 0:00:08  loss: 0.7242 (0.7157)  acc1: 81.6406 (81.2855)  acc5: 96.4844 (96.3068)  time: 0.2984  data: 0.1556  max mem: 43366
+Test:  [20/40]  eta: 0:00:04  loss: 0.7356 (0.7322)  acc1: 80.0781 (80.5618)  acc5: 96.0938 (96.2612)  time: 0.1713  data: 0.0351  max mem: 43366
+Test:  [30/40]  eta: 0:00:02  loss: 0.7428 (0.7334)  acc1: 79.6875 (80.6074)  acc5: 96.4844 (96.4466)  time: 0.1644  data: 0.0321  max mem: 43366
+Test:  [39/40]  eta: 0:00:00  loss: 0.6801 (0.7156)  acc1: 80.8594 (80.9600)  acc5: 96.8750 (96.4800)  time: 0.1674  data: 0.0339  max mem: 43366
+Test: Total time: 0:00:08 (0.2056 s / it)
+* Acc@1 80.960 Acc@5 96.480 loss 0.716
+Accuracy of the network on the 40 test images: 81.0%
+Max accuracy: 80.96%
+첫 이터레이션 준비 (FP32 Full Precision)
+first sum 개수
+104
+second sum 개수
+104
+Epoch: [1]  [  0/195]  eta: 0:10:31    time: 3.2396  data: 2.0564  max mem: 43366
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+Epoch: [1]  [100/195]  eta: 0:01:16  loss: 0.1488 (0.1606)  lr: 0.0001 (0.0001)  time: 0.7727  data: 0.0011  max mem: 43367
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+Epoch: [1]  [194/195]  eta: 0:00:00  loss: 0.1573 (0.1619)  lr: 0.0001 (0.0001)  time: 0.7820  data: 0.0012  max mem: 43369
+Epoch: [1] Total time: 0:02:34 (0.7915 s / it)
+Averaged stats: loss: 0.1573 (0.1619)  lr: 0.0001 (0.0001)
+Current learning rate: 9.995614150494293e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:57  loss: 0.7862 (0.7862)  acc1: 81.6406 (81.6406)  acc5: 95.3125 (95.3125)  time: 1.4465  data: 1.2955  max mem: 43369
+Test:  [10/40]  eta: 0:00:09  loss: 0.7198 (0.7247)  acc1: 80.8594 (81.4986)  acc5: 96.0938 (95.8097)  time: 0.3021  data: 0.1562  max mem: 43369
+Test:  [20/40]  eta: 0:00:04  loss: 0.7198 (0.7416)  acc1: 80.0781 (80.6548)  acc5: 96.0938 (96.2426)  time: 0.1763  data: 0.0372  max mem: 43369
+Test:  [30/40]  eta: 0:00:02  loss: 0.7723 (0.7410)  acc1: 80.0781 (80.8972)  acc5: 96.8750 (96.4466)  time: 0.1602  data: 0.0297  max mem: 43369
+Test:  [39/40]  eta: 0:00:00  loss: 0.6893 (0.7248)  acc1: 82.0312 (81.2100)  acc5: 97.2656 (96.4800)  time: 0.1474  data: 0.0263  max mem: 43369
+Test: Total time: 0:00:07 (0.1966 s / it)
+* Acc@1 81.210 Acc@5 96.480 loss 0.725
+Accuracy of the network on the 40 test images: 81.2%
+Max accuracy: 81.21%
+첫 이터레이션 준비 (FP32 Full Precision)
+first sum 개수
+104
+second sum 개수
+104
+Epoch: [2]  [  0/195]  eta: 0:10:16    time: 3.1599  data: 1.9496  max mem: 43369
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104
+first sum 개수
+104
+second sum 개수
+104

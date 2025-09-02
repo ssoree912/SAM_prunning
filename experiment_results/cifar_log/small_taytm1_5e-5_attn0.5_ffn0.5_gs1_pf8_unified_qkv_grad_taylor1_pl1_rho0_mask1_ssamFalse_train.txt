@@ -1,0 +1,55 @@
+지정된 CUDA 장치: '0'
+CUDA 사용 가능: True
+원래 GPU 개수: 1
+GPU 0번을 'cuda:0'으로 매핑했습니다
+Not using distributed mode
+Effective Arguments: Namespace(model='resnet50', input_size=224, drop=0.0, drop_path=0.1, color_jitter=0.3, aa='rand-m9-mstd0.5-inc1', smoothing=0.1, train_interpolation='bicubic', repeated_aug=True, train_mode=True, ThreeAugment=False, src=False, reprob=0.25, remode='pixel', recount=1, resplit=False, mixup=0.8, cutmix=1.0, cutmix_minmax=None, mixup_prob=1.0, mixup_switch_prob=0.5, mixup_mode='batch', cosub=False, finetune='', attn_only=False, data_path='/home/20223204/data/CIFAR100', data_set='IMNET', inat_category='name', seed=0, output_dir='./experiment_results/checkpoints', pin_mem=True, num_workers=10, prompt_length=1, prompt_dim=768, prompt_weight=0.1, group_size=1, attn_prune_rate=0.5, ffn_prune_rate=0.5, rho=0.0, mask_type=1, second_step_after_mask=True, gpuids=[0], prune_freq=8, prune_rate=0.3, prune_imp='taylor1', mag_type='grad', model_size='small', cu_num='0', warmup=1, target_epoch=1, method='unified_qkv', batch_size=512, epochs=1, bce_loss=False, unscale_lr=False, model_ema=True, model_ema_decay=0.99996, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.05, sched='cosine', lr=5e-05, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, warmup_lr=1e-06, min_lr=1e-05, decay_epochs=30, warmup_epochs=0, cooldown_epochs=10, patience_epochs=10, decay_rate=0.1, device='cuda', checkpoint='', start_epoch=0, eval=False, eval_crop_ratio=0.875, dist_eval=False, local_rank=0, distributed=False, world_size=1, dist_url='env://')
+Creating model: vit_small_patch16_224
+Loading checkpoint: checkpoint/deit_small_patch16_224-cd65a155.pth
+Removed classification head keys from checkpoint: ['head.weight', 'head.bias']
+Checkpoint loading report (missing keys should include head weights):
+  Missing keys: ['cls_token', 'pos_embed', 'patch_embed.proj.weight', 'patch_embed.proj.bias', 'blocks.0.norm1.weight', 'blocks.0.norm1.bias', 'blocks.0.attn.qkv.weight', 'blocks.0.attn.proj.weight', 'blocks.0.attn.proj.bias', 'blocks.0.norm2.weight', 'blocks.0.norm2.bias', 'blocks.0.mlp.fc1.weight', 'blocks.0.mlp.fc1.bias', 'blocks.0.mlp.fc2.weight', 'blocks.0.mlp.fc2.bias', 'blocks.1.norm1.weight', 'blocks.1.norm1.bias', 'blocks.1.attn.qkv.weight', 'blocks.1.attn.proj.weight', 'blocks.1.attn.proj.bias', 'blocks.1.norm2.weight', 'blocks.1.norm2.bias', 'blocks.1.mlp.fc1.weight', 'blocks.1.mlp.fc1.bias', 'blocks.1.mlp.fc2.weight', 'blocks.1.mlp.fc2.bias', 'blocks.2.norm1.weight', 'blocks.2.norm1.bias', 'blocks.2.attn.qkv.weight', 'blocks.2.attn.proj.weight', 'blocks.2.attn.proj.bias', 'blocks.2.norm2.weight', 'blocks.2.norm2.bias', 'blocks.2.mlp.fc1.weight', 'blocks.2.mlp.fc1.bias', 'blocks.2.mlp.fc2.weight', 'blocks.2.mlp.fc2.bias', 'blocks.3.norm1.weight', 'blocks.3.norm1.bias', 'blocks.3.attn.qkv.weight', 'blocks.3.attn.proj.weight', 'blocks.3.attn.proj.bias', 'blocks.3.norm2.weight', 'blocks.3.norm2.bias', 'blocks.3.mlp.fc1.weight', 'blocks.3.mlp.fc1.bias', 'blocks.3.mlp.fc2.weight', 'blocks.3.mlp.fc2.bias', 'blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias', 'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.fc1.weight', 'blocks.4.mlp.fc1.bias', 'blocks.4.mlp.fc2.weight', 'blocks.4.mlp.fc2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.proj.weight', 'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.fc1.weight', 'blocks.5.mlp.fc1.bias', 'blocks.5.mlp.fc2.weight', 'blocks.5.mlp.fc2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', 'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.fc1.weight', 'blocks.6.mlp.fc1.bias', 'blocks.6.mlp.fc2.weight', 'blocks.6.mlp.fc2.bias', 'blocks.7.norm1.weight', 'blocks.7.norm1.bias', 'blocks.7.attn.qkv.weight', 'blocks.7.attn.proj.weight', 'blocks.7.attn.proj.bias', 'blocks.7.norm2.weight', 'blocks.7.norm2.bias', 'blocks.7.mlp.fc1.weight', 'blocks.7.mlp.fc1.bias', 'blocks.7.mlp.fc2.weight', 'blocks.7.mlp.fc2.bias', 'norm.weight', 'norm.bias', 'head.weight', 'head.bias']
+  Unexpected keys: []
+Replacing Linear layers with MaskLinear
+Setting Dropout to 0.0
+완료 ㅋㅋ
+Number of trainable params: 48080740
+Scaled learning rate to: 5e-05
+SAM rho 지정 바로 아래줄
+0.0
+
+Initializing previous masks...
+  Initialized prev_mask for: model.blocks.0.attn.qkv
+  Initialized prev_mask for: model.blocks.0.attn.proj
+  Initialized prev_mask for: model.blocks.0.mlp.fc1
+  Initialized prev_mask for: model.blocks.0.mlp.fc2
+  Initialized prev_mask for: model.blocks.1.attn.qkv
+  Initialized prev_mask for: model.blocks.1.attn.proj
+  Initialized prev_mask for: model.blocks.1.mlp.fc1
+  Initialized prev_mask for: model.blocks.1.mlp.fc2
+  Initialized prev_mask for: model.blocks.2.attn.qkv
+  Initialized prev_mask for: model.blocks.2.attn.proj
+  Initialized prev_mask for: model.blocks.2.mlp.fc1
+  Initialized prev_mask for: model.blocks.2.mlp.fc2
+  Initialized prev_mask for: model.blocks.3.attn.qkv
+  Initialized prev_mask for: model.blocks.3.attn.proj
+  Initialized prev_mask for: model.blocks.3.mlp.fc1
+  Initialized prev_mask for: model.blocks.3.mlp.fc2
+  Initialized prev_mask for: model.blocks.4.attn.qkv
+  Initialized prev_mask for: model.blocks.4.attn.proj
+  Initialized prev_mask for: model.blocks.4.mlp.fc1
+  Initialized prev_mask for: model.blocks.4.mlp.fc2
+  Initialized prev_mask for: model.blocks.5.attn.qkv
+  Initialized prev_mask for: model.blocks.5.attn.proj
+  Initialized prev_mask for: model.blocks.5.mlp.fc1
+  Initialized prev_mask for: model.blocks.5.mlp.fc2
+  Initialized prev_mask for: model.blocks.6.attn.qkv
+  Initialized prev_mask for: model.blocks.6.attn.proj
+  Initialized prev_mask for: model.blocks.6.mlp.fc1
+  Initialized prev_mask for: model.blocks.6.mlp.fc2
+  Initialized prev_mask for: model.blocks.7.attn.qkv
+  Initialized prev_mask for: model.blocks.7.attn.proj
+  Initialized prev_mask for: model.blocks.7.mlp.fc1
+  Initialized prev_mask for: model.blocks.7.mlp.fc2
+  Initialized prev_mask for: model.head
+Start training for 1 epochs

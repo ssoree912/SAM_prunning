@@ -1,0 +1,301 @@
+| distributed init (rank 0): env://
+J115:40444:40444 [0] NCCL INFO Bootstrap : Using eth0:172.17.0.13<0>
+J115:40444:40444 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+J115:40444:40444 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.20.5+cuda12.4
+J115:40444:40458 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+J115:40444:40458 [0] NCCL INFO NET/Socket : Using [0]eth0:172.17.0.13<0>
+J115:40444:40458 [0] NCCL INFO Using non-device net plugin version 0
+J115:40444:40458 [0] NCCL INFO Using network Socket
+J115:40444:40458 [0] NCCL INFO comm 0x7f734870e000 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId e5000 commId 0xd3039eeadd0dd4b3 - Init START
+J115:40444:40458 [0] NCCL INFO NCCL_P2P_LEVEL set by environment to LOC
+J115:40444:40458 [0] NCCL INFO Setting affinity for GPU 0 to 0400,00000000,01101401,00000000
+J115:40444:40458 [0] NCCL INFO comm 0x7f734870e000 rank 0 nRanks 1 nNodes 1 localRanks 1 localRank 0 MNNVL 0
+J115:40444:40458 [0] NCCL INFO Channel 00/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 01/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 02/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 03/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 04/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 05/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 06/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 07/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 08/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 09/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 10/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 11/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 12/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 13/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 14/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 15/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 16/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 17/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 18/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 19/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 20/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 21/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 22/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 23/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 24/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 25/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 26/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 27/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 28/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 29/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 30/32 :    0
+J115:40444:40458 [0] NCCL INFO Channel 31/32 :    0
+J115:40444:40458 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+J115:40444:40458 [0] NCCL INFO P2P Chunksize set to 131072
+J115:40444:40458 [0] NCCL INFO Connected all rings
+J115:40444:40458 [0] NCCL INFO Connected all trees
+J115:40444:40458 [0] NCCL INFO 32 coll channels, 0 collnet channels, 0 nvls channels, 32 p2p channels, 32 p2p channels per peer
+J115:40444:40458 [0] NCCL INFO comm 0x7f734870e000 rank 0 nranks 1 cudaDev 0 nvmlDev 0 busId e5000 commId 0xd3039eeadd0dd4b3 - Init COMPLETE
+Effective Arguments: Namespace(model='resnet50', input_size=224, drop=0.0, drop_path=0.1, color_jitter=0.3, aa='rand-m9-mstd0.5-inc1', smoothing=0.1, train_interpolation='bicubic', repeated_aug=True, train_mode=True, ThreeAugment=False, src=False, reprob=0.25, remode='pixel', recount=1, resplit=False, mixup=0.8, cutmix=1.0, cutmix_minmax=None, mixup_prob=1.0, mixup_switch_prob=0.5, mixup_mode='batch', cosub=False, finetune='', attn_only=False, data_path='/home/20223204/data/CIFAR100', data_set='IMNET', inat_category='name', seed=0, output_dir='./output', pin_mem=True, num_workers=10, prompt_length=10, prompt_dim=768, prompt_weight=0.1, group_size=1, attn_prune_rate=0.5, ffn_prune_rate=0.5, rho=0.0, mask_type=0, second_step_after_mask=1, random_mask_change=0, use_DLB=1, DLB_loss=1, overlap=0, T=3.0, alpha=1.0, prune_amplitude=0.1, prune_cycles=4, mask_finding_cos=0, prune_with_e=0, gpuids=[0], prune_freq=8, prune_rate=0.3, prune_imp='taylor1', mag_type='grad', model_size='small', cu_num='0', warmup=151, target_epoch=-1, method='unified_qkv', batch_size=256, epochs=75, bce_loss=False, unscale_lr=False, model_ema=True, model_ema_decay=0.99996, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.05, sched='cosine', lr=0.0001, lr_noise=None, lr_noise_pct=0.67, lr_noise_std=1.0, warmup_lr=1e-06, min_lr=1e-05, decay_epochs=30, warmup_epochs=0, cooldown_epochs=10, patience_epochs=10, decay_rate=0.1, device='cuda', checkpoint='cifar100_epoch25_1e-04_small_attn0.5_ffn0.5_8_sam_rho0.0_use_DLB1_DLB_loss_1_overlap_0_mask_finding_cos_0_prune_with_e_0.pth', start_epoch=0, eval=False, eval_crop_ratio=0.875, dist_eval=False, local_rank=0, distributed=True, world_size=1, dist_url='env://', rank=0, gpu=0, dist_backend='nccl')
+Files already downloaded and verified
+Files already downloaded and verified
+dataloader_
+Creating model: vit_small_patch16_224
+SAM rho 지정 바로 아래줄
+0.0
+
+Start training for 75 epochs
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [0]  [  0/195]  eta: 0:09:41    time: 2.9813  data: 1.4095  max mem: 21119
+Epoch: [0]  [100/195]  eta: 0:01:15  loss: 0.1482 (0.2592)  lr: 0.0001 (0.0001)  time: 0.7694  data: 0.0011  max mem: 43366
+Epoch: [0]  [194/195]  eta: 0:00:00  loss: 0.1124 (0.1929)  lr: 0.0001 (0.0001)  time: 0.7730  data: 0.0010  max mem: 43367
+Epoch: [0] Total time: 0:02:33 (0.7886 s / it)
+Averaged stats: loss: 0.1124 (0.1929)  lr: 0.0001 (0.0001)
+Current learning rate: 0.0001
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:49  loss: 0.6280 (0.6280)  acc1: 84.3750 (84.3750)  acc5: 96.8750 (96.8750)  time: 1.2276  data: 1.0850  max mem: 43367
+Test:  [10/40]  eta: 0:00:10  loss: 0.6937 (0.7135)  acc1: 82.4219 (82.9190)  acc5: 96.0938 (95.8452)  time: 0.3401  data: 0.2170  max mem: 43367
+Test:  [20/40]  eta: 0:00:05  loss: 0.6965 (0.7202)  acc1: 82.4219 (82.7195)  acc5: 96.4844 (96.2798)  time: 0.2501  data: 0.1282  max mem: 43367
+Test:  [30/40]  eta: 0:00:02  loss: 0.6712 (0.7019)  acc1: 83.2031 (82.7621)  acc5: 96.8750 (96.4592)  time: 0.2295  data: 0.1076  max mem: 43367
+Test:  [39/40]  eta: 0:00:00  loss: 0.6050 (0.6689)  acc1: 83.9844 (83.1200)  acc5: 96.8750 (96.5900)  time: 0.2098  data: 0.0903  max mem: 43367
+Test: Total time: 0:00:10 (0.2541 s / it)
+* Acc@1 83.120 Acc@5 96.590 loss 0.669
+Accuracy of the network on the 40 test images: 83.1%
+Max accuracy: 83.12%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [1]  [  0/195]  eta: 0:08:08    time: 2.5061  data: 1.3614  max mem: 43367
+Epoch: [1]  [100/195]  eta: 0:01:14  loss: 0.0797 (0.0840)  lr: 0.0001 (0.0001)  time: 0.7704  data: 0.0011  max mem: 43367
+Epoch: [1]  [194/195]  eta: 0:00:00  loss: 0.0802 (0.0829)  lr: 0.0001 (0.0001)  time: 0.7742  data: 0.0010  max mem: 43367
+Epoch: [1] Total time: 0:02:31 (0.7771 s / it)
+Averaged stats: loss: 0.0802 (0.0829)  lr: 0.0001 (0.0001)
+Current learning rate: 9.995614150494293e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:35  loss: 0.6124 (0.6124)  acc1: 85.1562 (85.1562)  acc5: 96.4844 (96.4844)  time: 0.8909  data: 0.7582  max mem: 43367
+Test:  [10/40]  eta: 0:00:09  loss: 0.7435 (0.7046)  acc1: 82.4219 (82.7770)  acc5: 96.4844 (96.5554)  time: 0.3187  data: 0.1879  max mem: 43367
+Test:  [20/40]  eta: 0:00:05  loss: 0.7435 (0.7168)  acc1: 81.6406 (82.1429)  acc5: 96.4844 (96.7634)  time: 0.2447  data: 0.1124  max mem: 43367
+Test:  [30/40]  eta: 0:00:02  loss: 0.6874 (0.7059)  acc1: 82.8125 (82.5353)  acc5: 97.2656 (96.8876)  time: 0.2167  data: 0.0839  max mem: 43367
+Test:  [39/40]  eta: 0:00:00  loss: 0.6075 (0.6641)  acc1: 84.7656 (83.1600)  acc5: 97.6562 (96.9700)  time: 0.2004  data: 0.0761  max mem: 43367
+Test: Total time: 0:00:09 (0.2398 s / it)
+* Acc@1 83.160 Acc@5 96.970 loss 0.664
+Accuracy of the network on the 40 test images: 83.2%
+Max accuracy: 83.16%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [2]  [  0/195]  eta: 0:08:27    time: 2.6050  data: 1.4397  max mem: 43367
+Epoch: [2]  [100/195]  eta: 0:01:15  loss: 0.0663 (0.0703)  lr: 0.0001 (0.0001)  time: 0.7768  data: 0.0012  max mem: 43367
+Epoch: [2]  [194/195]  eta: 0:00:00  loss: 0.0728 (0.0715)  lr: 0.0001 (0.0001)  time: 0.7759  data: 0.0011  max mem: 43367
+Epoch: [2] Total time: 0:02:32 (0.7805 s / it)
+Averaged stats: loss: 0.0728 (0.0715)  lr: 0.0001 (0.0001)
+Current learning rate: 9.982464296247522e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:36  loss: 0.7142 (0.7142)  acc1: 84.7656 (84.7656)  acc5: 96.0938 (96.0938)  time: 0.9157  data: 0.7852  max mem: 43367
+Test:  [10/40]  eta: 0:00:09  loss: 0.7391 (0.7446)  acc1: 83.2031 (83.0611)  acc5: 96.4844 (96.3778)  time: 0.3259  data: 0.1870  max mem: 43367
+Test:  [20/40]  eta: 0:00:05  loss: 0.7037 (0.7577)  acc1: 82.4219 (82.5707)  acc5: 96.4844 (96.5960)  time: 0.2605  data: 0.1207  max mem: 43367
+Test:  [30/40]  eta: 0:00:02  loss: 0.7006 (0.7484)  acc1: 82.4219 (82.6235)  acc5: 96.4844 (96.5726)  time: 0.2505  data: 0.1121  max mem: 43367
+Test:  [39/40]  eta: 0:00:00  loss: 0.6493 (0.7095)  acc1: 83.5938 (82.9800)  acc5: 96.4844 (96.7200)  time: 0.2244  data: 0.0940  max mem: 43367
+Test: Total time: 0:00:10 (0.2587 s / it)
+* Acc@1 82.980 Acc@5 96.720 loss 0.709
+Accuracy of the network on the 40 test images: 83.0%
+Max accuracy: 83.16%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [3]  [  0/195]  eta: 0:08:33    time: 2.6338  data: 1.5037  max mem: 43367
+Epoch: [3]  [100/195]  eta: 0:01:14  loss: 0.0755 (0.0719)  lr: 0.0001 (0.0001)  time: 0.7661  data: 0.0010  max mem: 43367
+Epoch: [3]  [194/195]  eta: 0:00:00  loss: 0.0677 (0.0701)  lr: 0.0001 (0.0001)  time: 0.7676  data: 0.0010  max mem: 43367
+Epoch: [3] Total time: 0:02:31 (0.7774 s / it)
+Averaged stats: loss: 0.0677 (0.0701)  lr: 0.0001 (0.0001)
+Current learning rate: 9.96057350657239e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:36  loss: 0.7578 (0.7578)  acc1: 82.8125 (82.8125)  acc5: 94.9219 (94.9219)  time: 0.9211  data: 0.7896  max mem: 43367
+Test:  [10/40]  eta: 0:00:10  loss: 0.7123 (0.7162)  acc1: 82.8125 (82.7415)  acc5: 96.0938 (96.2003)  time: 0.3351  data: 0.2027  max mem: 43367
+Test:  [20/40]  eta: 0:00:05  loss: 0.7123 (0.7328)  acc1: 81.2500 (82.2545)  acc5: 96.8750 (96.5774)  time: 0.2636  data: 0.1313  max mem: 43367
+Test:  [30/40]  eta: 0:00:02  loss: 0.7215 (0.7216)  acc1: 82.8125 (82.6361)  acc5: 96.8750 (96.6356)  time: 0.2464  data: 0.1137  max mem: 43367
+Test:  [39/40]  eta: 0:00:00  loss: 0.6403 (0.6816)  acc1: 84.3750 (83.3000)  acc5: 97.2656 (96.7800)  time: 0.2441  data: 0.1196  max mem: 43367
+Test: Total time: 0:00:10 (0.2711 s / it)
+* Acc@1 83.300 Acc@5 96.780 loss 0.682
+Accuracy of the network on the 40 test images: 83.3%
+Max accuracy: 83.30%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [4]  [  0/195]  eta: 0:08:49    time: 2.7174  data: 1.5841  max mem: 43367
+Epoch: [4]  [100/195]  eta: 0:01:14  loss: 0.0553 (0.0615)  lr: 0.0001 (0.0001)  time: 0.7690  data: 0.0011  max mem: 43368
+Epoch: [4]  [194/195]  eta: 0:00:00  loss: 0.0559 (0.0604)  lr: 0.0001 (0.0001)  time: 0.7656  data: 0.0010  max mem: 43368
+Epoch: [4] Total time: 0:02:31 (0.7786 s / it)
+Averaged stats: loss: 0.0559 (0.0604)  lr: 0.0001 (0.0001)
+Current learning rate: 9.929980185352526e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:35  loss: 0.6088 (0.6088)  acc1: 87.5000 (87.5000)  acc5: 97.2656 (97.2656)  time: 0.8923  data: 0.7615  max mem: 43368
+Test:  [10/40]  eta: 0:00:10  loss: 0.7211 (0.7063)  acc1: 83.5938 (84.0199)  acc5: 96.8750 (96.4489)  time: 0.3390  data: 0.2086  max mem: 43368
+Test:  [20/40]  eta: 0:00:06  loss: 0.7211 (0.7194)  acc1: 82.0312 (83.0357)  acc5: 96.4844 (96.5588)  time: 0.2738  data: 0.1433  max mem: 43368
+Test:  [30/40]  eta: 0:00:02  loss: 0.6901 (0.7042)  acc1: 83.2031 (83.3165)  acc5: 96.4844 (96.6986)  time: 0.2524  data: 0.1218  max mem: 43368
+Test:  [39/40]  eta: 0:00:00  loss: 0.6055 (0.6823)  acc1: 85.1562 (83.7600)  acc5: 97.6562 (96.8200)  time: 0.2395  data: 0.1149  max mem: 43368
+Test: Total time: 0:00:10 (0.2727 s / it)
+* Acc@1 83.760 Acc@5 96.820 loss 0.682
+Accuracy of the network on the 40 test images: 83.8%
+Max accuracy: 83.76%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [5]  [  0/195]  eta: 0:08:41    time: 2.6749  data: 1.5431  max mem: 43368
+Epoch: [5]  [100/195]  eta: 0:01:15  loss: 0.0467 (0.0507)  lr: 0.0001 (0.0001)  time: 0.7654  data: 0.0009  max mem: 43368
+Epoch: [5]  [194/195]  eta: 0:00:00  loss: 0.0521 (0.0509)  lr: 0.0001 (0.0001)  time: 0.7655  data: 0.0010  max mem: 43368
+Epoch: [5] Total time: 0:02:31 (0.7781 s / it)
+Averaged stats: loss: 0.0521 (0.0509)  lr: 0.0001 (0.0001)
+Current learning rate: 9.890738003669029e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:34  loss: 0.6601 (0.6601)  acc1: 84.7656 (84.7656)  acc5: 96.8750 (96.8750)  time: 0.8712  data: 0.7284  max mem: 43368
+Test:  [10/40]  eta: 0:00:09  loss: 0.7003 (0.7194)  acc1: 83.2031 (83.2386)  acc5: 96.8750 (96.5199)  time: 0.3117  data: 0.1778  max mem: 43368
+Test:  [20/40]  eta: 0:00:05  loss: 0.7407 (0.7321)  acc1: 82.8125 (82.9055)  acc5: 96.8750 (96.6146)  time: 0.2492  data: 0.1179  max mem: 43368
+Test:  [30/40]  eta: 0:00:02  loss: 0.6885 (0.7120)  acc1: 82.8125 (83.1527)  acc5: 96.8750 (96.7742)  time: 0.2248  data: 0.0954  max mem: 43368
+Test:  [39/40]  eta: 0:00:00  loss: 0.6255 (0.6788)  acc1: 83.9844 (83.5400)  acc5: 97.2656 (96.9200)  time: 0.2028  data: 0.0815  max mem: 43368
+Test: Total time: 0:00:09 (0.2417 s / it)
+* Acc@1 83.540 Acc@5 96.920 loss 0.679
+Accuracy of the network on the 40 test images: 83.5%
+Max accuracy: 83.76%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [6]  [  0/195]  eta: 0:08:06    time: 2.4934  data: 1.3695  max mem: 43368
+Epoch: [6]  [100/195]  eta: 0:01:18  loss: 0.0481 (0.0477)  lr: 0.0001 (0.0001)  time: 0.8051  data: 0.0014  max mem: 43368
+Epoch: [6]  [194/195]  eta: 0:00:00  loss: 0.0546 (0.0496)  lr: 0.0001 (0.0001)  time: 0.8297  data: 0.0017  max mem: 43368
+Epoch: [6] Total time: 0:02:41 (0.8274 s / it)
+Averaged stats: loss: 0.0546 (0.0496)  lr: 0.0001 (0.0001)
+Current learning rate: 9.842915805643155e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:36  loss: 0.6666 (0.6666)  acc1: 85.5469 (85.5469)  acc5: 96.4844 (96.4844)  time: 0.9098  data: 0.7292  max mem: 43368
+Test:  [10/40]  eta: 0:00:09  loss: 0.7289 (0.7252)  acc1: 83.9844 (83.6293)  acc5: 96.4844 (96.3423)  time: 0.3256  data: 0.1764  max mem: 43368
+Test:  [20/40]  eta: 0:00:06  loss: 0.7289 (0.7320)  acc1: 82.8125 (82.9613)  acc5: 96.4844 (96.4472)  time: 0.2722  data: 0.1255  max mem: 43368
+Test:  [30/40]  eta: 0:00:02  loss: 0.7142 (0.7148)  acc1: 83.2031 (83.2913)  acc5: 96.4844 (96.5978)  time: 0.2465  data: 0.1016  max mem: 43368
+Test:  [39/40]  eta: 0:00:00  loss: 0.6359 (0.6868)  acc1: 84.3750 (83.4300)  acc5: 97.2656 (96.6600)  time: 0.2377  data: 0.1038  max mem: 43368
+Test: Total time: 0:00:10 (0.2664 s / it)
+* Acc@1 83.430 Acc@5 96.660 loss 0.687
+Accuracy of the network on the 40 test images: 83.4%
+Max accuracy: 83.76%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [7]  [  0/195]  eta: 0:09:26    time: 2.9029  data: 1.6927  max mem: 43368
+Epoch: [7]  [100/195]  eta: 0:01:16  loss: 0.0468 (0.0484)  lr: 0.0001 (0.0001)  time: 0.7656  data: 0.0011  max mem: 43368
+Epoch: [7]  [194/195]  eta: 0:00:00  loss: 0.0431 (0.0479)  lr: 0.0001 (0.0001)  time: 0.7695  data: 0.0010  max mem: 43368
+Epoch: [7] Total time: 0:02:33 (0.7860 s / it)
+Averaged stats: loss: 0.0431 (0.0479)  lr: 0.0001 (0.0001)
+Current learning rate: 9.786597487660337e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:46  loss: 0.7030 (0.7030)  acc1: 83.5938 (83.5938)  acc5: 97.6562 (97.6562)  time: 1.1626  data: 1.0276  max mem: 43368
+Test:  [10/40]  eta: 0:00:10  loss: 0.7030 (0.7216)  acc1: 83.5938 (83.0611)  acc5: 96.4844 (96.9815)  time: 0.3504  data: 0.2182  max mem: 43368
+Test:  [20/40]  eta: 0:00:06  loss: 0.7117 (0.7280)  acc1: 82.4219 (82.8311)  acc5: 96.4844 (96.9308)  time: 0.2684  data: 0.1371  max mem: 43368
+Test:  [30/40]  eta: 0:00:02  loss: 0.6763 (0.7104)  acc1: 83.2031 (83.1023)  acc5: 97.2656 (97.0388)  time: 0.2558  data: 0.1284  max mem: 43368
+Test:  [39/40]  eta: 0:00:00  loss: 0.6211 (0.6760)  acc1: 84.7656 (83.4600)  acc5: 97.6562 (97.1300)  time: 0.2393  data: 0.1214  max mem: 43368
+Test: Total time: 0:00:11 (0.2764 s / it)
+* Acc@1 83.460 Acc@5 97.130 loss 0.676
+Accuracy of the network on the 40 test images: 83.5%
+Max accuracy: 83.76%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [8]  [  0/195]  eta: 0:07:38    time: 2.3504  data: 1.2158  max mem: 43368
+Epoch: [8]  [100/195]  eta: 0:01:19  loss: 0.0420 (0.0436)  lr: 0.0001 (0.0001)  time: 0.8197  data: 0.0018  max mem: 43368
+Epoch: [8]  [194/195]  eta: 0:00:00  loss: 0.0485 (0.0441)  lr: 0.0001 (0.0001)  time: 0.8119  data: 0.0014  max mem: 43368
+Epoch: [8] Total time: 0:02:41 (0.8264 s / it)
+Averaged stats: loss: 0.0485 (0.0441)  lr: 0.0001 (0.0001)
+Current learning rate: 9.721881851187406e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:41  loss: 0.6824 (0.6824)  acc1: 84.7656 (84.7656)  acc5: 97.2656 (97.2656)  time: 1.0430  data: 0.8975  max mem: 43368
+Test:  [10/40]  eta: 0:00:10  loss: 0.7945 (0.7644)  acc1: 82.0312 (82.3509)  acc5: 96.4844 (96.5199)  time: 0.3384  data: 0.1960  max mem: 43368
+Test:  [20/40]  eta: 0:00:05  loss: 0.7753 (0.7569)  acc1: 81.6406 (82.2545)  acc5: 96.4844 (96.5030)  time: 0.2615  data: 0.1175  max mem: 43368
+Test:  [30/40]  eta: 0:00:02  loss: 0.7160 (0.7407)  acc1: 83.2031 (82.6235)  acc5: 96.8750 (96.6482)  time: 0.2539  data: 0.1088  max mem: 43368
+Test:  [39/40]  eta: 0:00:00  loss: 0.6579 (0.6987)  acc1: 85.1562 (83.1800)  acc5: 97.2656 (96.8700)  time: 0.2223  data: 0.0860  max mem: 43368
+Test: Total time: 0:00:10 (0.2640 s / it)
+* Acc@1 83.180 Acc@5 96.870 loss 0.699
+Accuracy of the network on the 40 test images: 83.2%
+Max accuracy: 83.76%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [9]  [  0/195]  eta: 0:08:41    time: 2.6736  data: 1.4636  max mem: 43368
+Epoch: [9]  [100/195]  eta: 0:01:15  loss: 0.0400 (0.0424)  lr: 0.0001 (0.0001)  time: 0.7685  data: 0.0010  max mem: 43368
+Epoch: [9]  [194/195]  eta: 0:00:00  loss: 0.0482 (0.0430)  lr: 0.0001 (0.0001)  time: 0.7764  data: 0.0010  max mem: 43368
+Epoch: [9] Total time: 0:02:32 (0.7828 s / it)
+Averaged stats: loss: 0.0482 (0.0430)  lr: 0.0001 (0.0001)
+Current learning rate: 9.648882429441257e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:38  loss: 0.6442 (0.6442)  acc1: 85.1562 (85.1562)  acc5: 96.4844 (96.4844)  time: 0.9537  data: 0.8218  max mem: 43368
+Test:  [10/40]  eta: 0:00:10  loss: 0.7071 (0.7271)  acc1: 82.8125 (83.4517)  acc5: 96.4844 (96.3068)  time: 0.3347  data: 0.2027  max mem: 43368
+Test:  [20/40]  eta: 0:00:05  loss: 0.7071 (0.7249)  acc1: 82.8125 (83.1473)  acc5: 96.4844 (96.5588)  time: 0.2563  data: 0.1238  max mem: 43368
+Test:  [30/40]  eta: 0:00:02  loss: 0.6858 (0.7080)  acc1: 84.3750 (83.6442)  acc5: 97.2656 (96.8246)  time: 0.2339  data: 0.1017  max mem: 43368
+Test:  [39/40]  eta: 0:00:00  loss: 0.6271 (0.6759)  acc1: 84.3750 (83.9900)  acc5: 97.6562 (96.8700)  time: 0.2201  data: 0.0975  max mem: 43368
+Test: Total time: 0:00:10 (0.2560 s / it)
+* Acc@1 83.990 Acc@5 96.870 loss 0.676
+Accuracy of the network on the 40 test images: 84.0%
+Max accuracy: 83.99%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [10]  [  0/195]  eta: 0:08:27    time: 2.6041  data: 1.4759  max mem: 43368
+Epoch: [10]  [100/195]  eta: 0:01:15  loss: 0.0414 (0.0440)  lr: 0.0001 (0.0001)  time: 0.7669  data: 0.0010  max mem: 43368
+Epoch: [10]  [194/195]  eta: 0:00:00  loss: 0.0333 (0.0416)  lr: 0.0001 (0.0001)  time: 0.7773  data: 0.0011  max mem: 43368
+Epoch: [10] Total time: 0:02:33 (0.7849 s / it)
+Averaged stats: loss: 0.0333 (0.0416)  lr: 0.0001 (0.0001)
+Current learning rate: 9.567727288213005e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:35  loss: 0.6557 (0.6557)  acc1: 85.1562 (85.1562)  acc5: 97.2656 (97.2656)  time: 0.8779  data: 0.7469  max mem: 43368
+Test:  [10/40]  eta: 0:00:08  loss: 0.7349 (0.7574)  acc1: 82.8125 (83.2031)  acc5: 96.0938 (96.4489)  time: 0.2715  data: 0.1400  max mem: 43368
+Test:  [20/40]  eta: 0:00:05  loss: 0.7514 (0.7584)  acc1: 82.0312 (82.7009)  acc5: 96.0938 (96.5030)  time: 0.2333  data: 0.1002  max mem: 43368
+Test:  [30/40]  eta: 0:00:02  loss: 0.7206 (0.7370)  acc1: 82.8125 (83.2031)  acc5: 97.2656 (96.8498)  time: 0.2538  data: 0.1205  max mem: 43368
+Test:  [39/40]  eta: 0:00:00  loss: 0.6335 (0.7031)  acc1: 84.7656 (83.5300)  acc5: 97.2656 (96.9500)  time: 0.2495  data: 0.1204  max mem: 43368
+Test: Total time: 0:00:10 (0.2538 s / it)
+* Acc@1 83.530 Acc@5 96.950 loss 0.703
+Accuracy of the network on the 40 test images: 83.5%
+Max accuracy: 83.99%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [11]  [  0/195]  eta: 0:07:29    time: 2.3053  data: 1.1675  max mem: 43368
+Epoch: [11]  [100/195]  eta: 0:01:14  loss: 0.0375 (0.0394)  lr: 0.0001 (0.0001)  time: 0.7772  data: 0.0012  max mem: 43368
+Epoch: [11]  [194/195]  eta: 0:00:00  loss: 0.0427 (0.0401)  lr: 0.0001 (0.0001)  time: 0.7700  data: 0.0010  max mem: 43368
+Epoch: [11] Total time: 0:02:31 (0.7791 s / it)
+Averaged stats: loss: 0.0427 (0.0401)  lr: 0.0001 (0.0001)
+Current learning rate: 9.478558801197065e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:48  loss: 0.6666 (0.6666)  acc1: 85.5469 (85.5469)  acc5: 96.0938 (96.0938)  time: 1.2247  data: 1.0734  max mem: 43368
+Test:  [10/40]  eta: 0:00:10  loss: 0.7597 (0.7532)  acc1: 82.4219 (82.9190)  acc5: 96.0938 (96.3423)  time: 0.3587  data: 0.2246  max mem: 43368
+Test:  [20/40]  eta: 0:00:06  loss: 0.7597 (0.7537)  acc1: 82.8125 (82.6637)  acc5: 96.4844 (96.5402)  time: 0.2654  data: 0.1336  max mem: 43368
+Test:  [30/40]  eta: 0:00:02  loss: 0.6712 (0.7296)  acc1: 83.2031 (83.0519)  acc5: 96.8750 (96.7742)  time: 0.2351  data: 0.1018  max mem: 43368
+Test:  [39/40]  eta: 0:00:00  loss: 0.6377 (0.6961)  acc1: 85.1562 (83.5800)  acc5: 97.6562 (96.9200)  time: 0.2380  data: 0.1107  max mem: 43368
+Test: Total time: 0:00:10 (0.2743 s / it)
+* Acc@1 83.580 Acc@5 96.920 loss 0.696
+Accuracy of the network on the 40 test images: 83.6%
+Max accuracy: 83.99%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [12]  [  0/195]  eta: 0:08:35    time: 2.6450  data: 1.4975  max mem: 43368
+Epoch: [12]  [100/195]  eta: 0:01:15  loss: 0.0354 (0.0371)  lr: 0.0001 (0.0001)  time: 0.7684  data: 0.0010  max mem: 43368
+Epoch: [12]  [194/195]  eta: 0:00:00  loss: 0.0403 (0.0375)  lr: 0.0001 (0.0001)  time: 0.8364  data: 0.0011  max mem: 43368
+Epoch: [12] Total time: 0:02:35 (0.7976 s / it)
+Averaged stats: loss: 0.0403 (0.0375)  lr: 0.0001 (0.0001)
+Current learning rate: 9.381533400219318e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 0:00:38  loss: 0.6969 (0.6969)  acc1: 86.3281 (86.3281)  acc5: 96.8750 (96.8750)  time: 0.9549  data: 0.8214  max mem: 43368
+Test:  [10/40]  eta: 0:00:10  loss: 0.7313 (0.7490)  acc1: 83.2031 (83.7003)  acc5: 96.8750 (96.6619)  time: 0.3630  data: 0.2256  max mem: 43368
+Test:  [20/40]  eta: 0:00:06  loss: 0.7243 (0.7398)  acc1: 82.8125 (83.2031)  acc5: 96.8750 (96.8378)  time: 0.2906  data: 0.1484  max mem: 43368
+Test:  [30/40]  eta: 0:00:02  loss: 0.7055 (0.7324)  acc1: 83.2031 (83.4047)  acc5: 97.2656 (96.8876)  time: 0.2612  data: 0.1214  max mem: 43368
+Test:  [39/40]  eta: 0:00:00  loss: 0.6660 (0.6942)  acc1: 84.3750 (83.6900)  acc5: 97.2656 (96.9900)  time: 0.2425  data: 0.1139  max mem: 43368
+Test: Total time: 0:00:11 (0.2869 s / it)
+* Acc@1 83.690 Acc@5 96.990 loss 0.694
+Accuracy of the network on the 40 test images: 83.7%
+Max accuracy: 83.99%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [13]  [  0/195]  eta: 0:18:09    time: 5.5866  data: 4.2065  max mem: 43368
+Epoch: [13]  [100/195]  eta: 0:01:23  loss: 0.0323 (0.0369)  lr: 0.0001 (0.0001)  time: 0.8367  data: 0.0011  max mem: 43368
+Epoch: [13]  [194/195]  eta: 0:00:00  loss: 0.0370 (0.0381)  lr: 0.0001 (0.0001)  time: 0.9919  data: 0.0013  max mem: 43368
+Epoch: [13] Total time: 0:02:53 (0.8898 s / it)
+Averaged stats: loss: 0.0370 (0.0381)  lr: 0.0001 (0.0001)
+Current learning rate: 9.276821300802534e-05
+et_all_type_values == 0 으로ㅓ 성ㄹ정
+Test:  [ 0/40]  eta: 3 days, 6:51:28  loss: 0.6867 (0.6867)  acc1: 83.9844 (83.9844)  acc5: 97.2656 (97.2656)  time: 7097.2051  data: 7097.0083  max mem: 43368
+Test:  [10/40]  eta: 5:22:44  loss: 0.7449 (0.7553)  acc1: 82.8125 (83.3097)  acc5: 96.4844 (96.6264)  time: 645.4974  data: 645.3306  max mem: 43368
+Test:  [20/40]  eta: 1:52:44  loss: 0.7490 (0.7584)  acc1: 82.8125 (82.7381)  acc5: 96.4844 (96.8564)  time: 0.2913  data: 0.1413  max mem: 43368
+Test:  [30/40]  eta: 0:38:12  loss: 0.7463 (0.7439)  acc1: 82.8125 (82.9889)  acc5: 97.2656 (96.9506)  time: 0.2508  data: 0.1164  max mem: 43368
+Test:  [39/40]  eta: 0:02:57  loss: 0.6528 (0.7108)  acc1: 83.9844 (83.3600)  acc5: 97.6562 (97.0800)  time: 0.2266  data: 0.0975  max mem: 43368
+Test: Total time: 1:58:27 (177.6827 s / it)
+* Acc@1 83.360 Acc@5 97.080 loss 0.711
+Accuracy of the network on the 40 test images: 83.4%
+Max accuracy: 83.99%
+첫 이터레이션 준비 (FP32 Full Precision)
+Epoch: [14]  [  0/195]  eta: 0:08:25    time: 2.5904  data: 1.4329  max mem: 43368
+Epoch: [14]  [100/195]  eta: 0:01:22  loss: 0.0341 (0.0356)  lr: 0.0001 (0.0001)  time: 1.0590  data: 0.0010  max mem: 43368
