@@ -194,9 +194,9 @@ def base_parser(parser):
     parser.add_argument('--group_size', dest='group_size', default=16, type=int,
                      help='group size for pruning (default: 16)')
 
-    parser.add_argument('--attn-prune-rate', dest='attn_prune_rate', default=None, type=float,
+    parser.add_argument('--attn-prune-rate', dest='attn_prune_rate', default=0.3, type=float,
                          help='pruning rate for attention components (QK, V)')
-    parser.add_argument('--ffn-prune-rate', dest='ffn_prune_rate', default=None, type=float,
+    parser.add_argument('--ffn-prune-rate', dest='ffn_prune_rate', default=0.3, type=float,
                          help='pruning rate for FFN components')
     parser.add_argument('--rho', default = 0, type = float)
     parser.add_argument('--mask_type', default = 0, type = int)
@@ -206,6 +206,11 @@ def base_parser(parser):
     parser.add_argument('--use_DLB', default = 0 , type = int)
     parser.add_argument('--DLB_loss' , default = 0 , type = int)
     parser.add_argument('--overlap', default = 0 , type = int)
+    
+    # Wandb settings
+    parser.add_argument('--wandb', action='store_true', help='Use wandb for logging')
+    parser.add_argument('--wandb-project', default='SAM_pruning', type=str, help='wandb project name')
+    parser.add_argument('--wandb-name', default=None, type=str, help='wandb run name')
     
     parser.add_argument('--T', type=float, default=3.0)
     parser.add_argument("--alpha", type=float, default=1.0)

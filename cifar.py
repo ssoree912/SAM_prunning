@@ -11,6 +11,7 @@ from pathlib import Path
 # Third-party imports
 import numpy as np
 import torch
+import wandb
 import torch.nn as nn
 import torch.distributed as dist
 import torch.backends.cudnn as cudnn
@@ -571,6 +572,15 @@ def main(args):
 if __name__ == '__main__':
     args = get_train_args()
     os.environ['CUDA_VISIBLE_DEVICES'] = args.cu_num
+    
+    # Initialize wandb
+    if args.wandb:
+        wandb.init(
+            project=args.wandb_project,
+            name=args.wandb_name,
+            config=vars(args)
+        )
+    
     if args.output_dir:
         Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     main(args)
