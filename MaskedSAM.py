@@ -37,7 +37,8 @@ class MaskedSAM(torch.optim.Optimizer):
                     continue
 
                 mask = mask_dict.get(p, None) if mask_dict else None
-                v = self._masked_vec(p, grad_to_use, group["adaptive"], mask)
+                v = self._masked_vec(p, grad_to_use, group["adaptive"], mask) 
+                
                 
                 if v is None:
                     continue
@@ -70,8 +71,8 @@ class MaskedSAM(torch.optim.Optimizer):
                     continue
 
                 mask = mask_dict.get(p, None) if mask_dict else None
-                v = self._masked_vec(p, grad, group["adaptive"], mask)
-                
+                v = self._masked_vec(p, grad, group["adaptive"], mask) #살아있는 파라미터한테만, 마스크가 0인 경우는 0으로 만듦
+
                 if v is None:
                     continue
                 

@@ -199,7 +199,8 @@ def base_parser(parser):
     parser.add_argument('--ffn-prune-rate', dest='ffn_prune_rate', default=0.3, type=float,
                          help='pruning rate for FFN components')
     parser.add_argument('--rho', default = 0, type = float)
-    parser.add_argument('--mask_type', default = 0, type = int)
+    parser.add_argument('--mask_type', default = 0, type = int, 
+                        help='Masker type: 0=Static, 1=Dynamic(gradient scaling), 2=Dense, 3=Static_scale, 4=Scale, 5=ReviveGrad, 6=MaskerDynamic(full gradient)')
     parser.add_argument('--second_step_after_mask', default = 0, type = int)
     parser.add_argument('--random_mask_change', default = 0, type = int)
 

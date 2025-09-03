@@ -86,6 +86,16 @@ class Dynamic_Masker(torch.autograd.Function):
         # 마스크가 0인 위치: 1000배 증폭, 1인 위치: 원본 유지
         scaling_factor = mask + (1 - mask) * 100   # [1 or 1000] 형태의 텐서
         return grad * scaling_factor, None  # x에 대한 gradient만 반환
+
+class MaskerDynamic(torch.autograd.Function):
+    """DPF: dead weights can reactivate (full gradient)"""
+    @staticmethod
+    def forward(ctx, x, mask):
+        return x * mask
+    
+    @staticmethod
+    def backward(ctx, grad_out):
+        return grad_out, None
     
 class ReviveGrad_Masker(torch.autograd.Function):
     @staticmethod
@@ -151,6 +161,8 @@ class MaskConv2d(nn.Conv2d):
             masked_weight = dense.apply(self.weight)
         elif self.type_value == 5:
             masked_weight = ReviveGrad_Masker.apply(self.wegith, self.mask)
+        elif self.type_value == 6:
+            masked_weight = MaskerDynamic.apply(self.weight, self.mask)
 
         return super(MaskConv2d, self)._conv_forward(input, masked_weight,self.bias)
 
@@ -177,6 +189,8 @@ class MaskLinear(nn.Linear):
             masked_weight = scale_Masker.apply(self.weight, self.mask)
         elif self.type_value == 5:
             masked_weight = ReviveGrad_Masker.apply(self.wegith, self.mask)
+        elif self.type_value == 6:
+            masked_weight = MaskerDynamic.apply(self.weight, self.mask)
 
         return F.linear(input, masked_weight, self.bias * self.bias_mask)
 
