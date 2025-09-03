@@ -694,7 +694,7 @@ def train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, device, ep
         optimizer.zero_grad()
 
         mask_dict = get_mask_dict(model)
-        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) 가중치 섭동
+        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) #가중치 섭동
 
         with torch.cuda.amp.autocast():
             #####################이제 전체 배치에 대해(이전 배치의 새로운 뷰 + 현재 배치의 뷰 0
@@ -871,8 +871,8 @@ def fine_train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, devic
         optimizer.zero_grad()
 
         mask_dict = get_mask_dict(model)
-        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) 가중치 섭동
-        
+        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) #가중치 섭동
+         
         with torch.cuda.amp.autocast():
             #####################이제 전체 배치에 대해(이전 배치의 새로운 뷰 + 현재 배치의 뷰 0
             pre_samples, pre_targets = pre_data

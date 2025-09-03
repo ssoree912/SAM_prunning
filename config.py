@@ -209,7 +209,7 @@ def base_parser(parser):
     
     # Wandb settings
     parser.add_argument('--wandb', action='store_true', help='Use wandb for logging')
-    parser.add_argument('--wandb-project', default='SAM_pruning', type=str, help='wandb project name')
+    parser.add_argument('--wandb-project', default='pruning', type=str, help='wandb project name')
     parser.add_argument('--wandb-name', default=None, type=str, help='wandb run name')
     
     parser.add_argument('--T', type=float, default=3.0)
