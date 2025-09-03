@@ -20,13 +20,23 @@ import pruning
 from pruning import *
 
 def get_mask_dict(model):
-    """현재 모델의 mask 딕셔너리 생성"""
+    """현재 모델의 mask 딕셔너리 생성 (DDP/비-DDP 안전)"""
     mask_dict = {}
-    for module in model.modules():
-        if hasattr(module, 'weight') and hasattr(module, 'mask'):
-            mask_dict[module.weight] = module.mask
-            if hasattr(module, 'bias') and module.bias is not None and hasattr(module, 'bias_mask'):
+    target = model.module if hasattr(model, 'module') else model
+    for module in target.modules():
+        if hasattr(module, 'weight') and module.weight is not None:
+            if hasattr(module, 'mask'):
+                # 마스크가 있는 경우: 실제 마스크 사용
+                mask_dict[module.weight] = module.mask
+            else:
+                # 마스크가 없는 경우: 모든 가중치에 정상 SAM 적용 (1로 가득 찬 마스크)
+                mask_dict[module.weight] = torch.ones_like(module.weight, device=module.weight.device, dtype=module.weight.dtype)
+        # 바이어스 처리
+        if hasattr(module, 'bias') and module.bias is not None:
+            if hasattr(module, 'bias_mask'):
                 mask_dict[module.bias] = module.bias_mask
+            else:
+                mask_dict[module.bias] = torch.ones_like(module.bias, device=module.bias.device, dtype=module.bias.dtype)
     return mask_dict
 
 import torch.nn.functional as F
@@ -254,7 +264,7 @@ def fine_evaluate(data_loader, model, device):
         model.module.set_all_type_values(0)
     else:
         model.set_all_type_values(0)
-    print("et_all_type_values == 0 으로ㅓ 성ㄹ정")
+    print("set_all_type_values == 0 으로 설정")
     
     for images, target in metric_logger.log_every(data_loader, 10, header):
         images = images.to(device, non_blocking=True)
@@ -376,13 +386,10 @@ def train_one_epoch(model, criterion, data_loader, optimizer, device, epoch, los
             attn_target_sparsity = args.attn_prune_rate
             ffn_target_sparsity = args.ffn_prune_rate
 
-        if epoch == args.target_epoch:
-            print("epoch == args.target_epoch이라 0으로 변경함 타겟 에포크:50 이하일땐 나오면 안됨")
-            # Handle both distributed and non-distributed models
-    if hasattr(model, 'module'):
-        model.module.set_all_type_values(0)
-    else:
-        model.set_all_type_values(0)
+        if (epoch + 1) == args.target_epoch and i == 0:
+            print("epoch == target_epoch: set_all_type_values(0)")
+            tgt = model.module if hasattr(model, 'module') else model
+            tgt.set_all_type_values(0)
 
 
 
@@ -668,24 +675,16 @@ def train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, device, ep
         if i == 0:
             print("첫 이터레이션 준비 (FP32 Full Precision)")
             optimizer.zero_grad()
-            mask_dict = get_mask_dict(model)
-            optimizer.first_step(zero_grad=True, mask_dict=mask_dict)
-            
             outputs = model(samples[:, 0, ...])
             loss = criterion(outputs, targets)
-
-            # ❗ loss_scaler 없이 직접 backward 호출
             loss.backward()
-
-            optimizer.second_step(zero_grad=True)
-
-            # ❗ loss_scaler 없이 직접 optimizer step 호출
+            # 부트스트랩은 평범한 업데이트로 실시 (SAM 섭동 없이)
             optimizer.step()
             optimizer.zero_grad()
 
             pre_data = (samples.clone(), targets.clone())
             pre_out = outputs.clone().detach()
-            continue # 다음 루프로
+            continue  # 다음 루프로
 
         # ========================================================================
         # 2. SAM의 first_step
@@ -845,24 +844,16 @@ def fine_train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, devic
         if i == 0:
             print("첫 이터레이션 준비 (FP32 Full Precision)")
             optimizer.zero_grad()
-            mask_dict = get_mask_dict(model)
-            optimizer.first_step(zero_grad=True, mask_dict=mask_dict)
-            
             outputs = model(samples[:, 0, ...])
             loss = criterion(outputs, targets)
-
-            # ❗ loss_scaler 없이 직접 backward 호출
             loss.backward()
-
-            optimizer.second_step(zero_grad=False)
-
-            # ❗ loss_scaler 없이 직접 optimizer step 호출
+            # 부트스트랩은 평범한 업데이트로 실시 (SAM 섭동 없이)
             optimizer.step()
             optimizer.zero_grad()
 
             pre_data = (samples.clone(), targets.clone())
             pre_out = outputs.clone().detach()
-            continue # 다음 루프로
+            continue  # 다음 루프로
        
         # ========================================================================
         # 2. SAM의 first_step
