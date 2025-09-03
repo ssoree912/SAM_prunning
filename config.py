@@ -202,7 +202,7 @@ def base_parser(parser):
     parser.add_argument('--mask_type', default = 0, type = int)
     parser.add_argument('--second_step_after_mask', default = 0, type = int)
     parser.add_argument('--random_mask_change', default = 0, type = int)
-    
+
     parser.add_argument('--use_DLB', default = 0 , type = int)
     parser.add_argument('--DLB_loss' , default = 0 , type = int)
     parser.add_argument('--overlap', default = 0 , type = int)

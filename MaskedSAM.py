@@ -10,15 +10,15 @@ class MaskedSAM(torch.optim.Optimizer):
         self.base_optimizer = base_optimizer(self.param_groups, **kwargs)
         self.param_groups = self.base_optimizer.param_groups
         self.v2 = v2
-
+        
     def _masked_vec(self, p, grad, adaptive, mask):
         if grad is None or mask is None:
             return None
         wscale = p.abs() if adaptive else 1.0
-        return (wscale * grad) * mask
+        return (wscale * grad) * mask # mask가 0이면 e 는 0
 
     @torch.no_grad()
-    def _grad_norm(self, mask_dict=None):
+    def _grad_norm(self, mask_dict=None): #norm 계산 
         shared_device = self.param_groups[0]["params"][0].device
         grad_list = []
 
@@ -76,7 +76,7 @@ class MaskedSAM(torch.optim.Optimizer):
                     continue
                 
                 e_w = v * scale.to(p)
-                p.add_(e_w)
+                p.add_(e_w)  # w ← w + ε
                 self.state[p]["e_w"] = e_w
                 
         if zero_grad: 
@@ -98,13 +98,15 @@ class MaskedSAM(torch.optim.Optimizer):
                     elif torch.isnan(p.grad).any():
                         print(f"🔥🔥🔥 WARNING: Gradient contains NAN for param shape: {p.shape} 🔥🔥🔥")
                         continue
-                        
+                    # (v2) 이번 스텝에서 계산된 grad를 prev_grad로 저장
                     self.state[p]["prev_grad"] = torch.clone(p.grad)
                     self.state[p]["prev_u"] = torch.clone(p)
 
                 if "e_w" in self.state[p]:
-                    p.sub_(self.state[p]["e_w"])
-
+                     # ε 복원
+                    p.sub_(self.state[p]["e_w"]) # w ← w - ε
+                    
+                #복원 단계(w+ε → w). 복원 이후 바깥에서 base_optimizer.step()을 호출해 실제 업데이트를 수행
         if zero_grad: 
             self.zero_grad()
 

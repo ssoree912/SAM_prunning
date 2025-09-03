@@ -522,6 +522,14 @@ def main(args):
 
         # Update max accuracy
         max_accuracy = max(max_accuracy, test_stats["acc1"])
+        
+        # Log epoch and max accuracy to wandb
+        if args.wandb:
+            import wandb
+            wandb.log({
+                "epoch": epoch,
+                "test/max_accuracy": max_accuracy
+            })
         print(f'  Max accuracy so far: {max_accuracy:.2f}%')
 
         # --- Checkpoint Saving ---

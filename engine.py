@@ -192,9 +192,9 @@ def fine_train_one_epoch(model: torch.nn.Module, criterion:torch.nn.CrossEntropy
             samples = torch.cat((samples,samples),dim=0)
 
         mask_dict = get_mask_dict(model)
-        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) 
+        optimizer.first_step(zero_grad=True, mask_dict=mask_dict) #① w ← w + ε
         with torch.cuda.amp.autocast():
-           outputs = model(samples[:, 0, ...]) 
+           outputs = model(samples[:, 0, ...]) # ② w+ε에서 손실/그라디언트
            if not args.cosub:
                cls_loss = criterion(outputs, targets)
            else:
@@ -872,7 +872,7 @@ def fine_train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, devic
 
         mask_dict = get_mask_dict(model)
         optimizer.first_step(zero_grad=True, mask_dict=mask_dict) #가중치 섭동
-         
+        
         with torch.cuda.amp.autocast():
             #####################이제 전체 배치에 대해(이전 배치의 새로운 뷰 + 현재 배치의 뷰 0
             pre_samples, pre_targets = pre_data
