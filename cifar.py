@@ -479,7 +479,7 @@ def main(args):
     
     
         if args.use_DLB== 0: 
-            train_stats, attn_target_sparsity, ffn_target_sparsity, iterations , prev_masks, mask_changes = train_one_epoch(
+            train_stats, attn_target_sparsity, ffn_target_sparsity, iterations , prev_masks, mask_changes, zero_metrics = train_one_epoch(
                 model, criterion, data_loader_train,
                 optimizer, device, epoch, loss_scaler,
                 args.clip_grad, model_ema, mixup_fn,
@@ -492,7 +492,7 @@ def main(args):
 
         elif args.use_DLB== 1: 
 
-            train_stats, attn_target_sparsity, ffn_target_sparsity, iterations , prev_masks, mask_changes = train_one_epoch_DLB_test(
+            train_stats, attn_target_sparsity, ffn_target_sparsity, iterations , prev_masks, mask_changes, zero_metrics = train_one_epoch_DLB_test(
                 model,criterion, data_loader_train,
                 optimizer, device, epoch, loss_scaler,
                 args.clip_grad, model_ema, mixup_fn,
@@ -526,10 +526,29 @@ def main(args):
         # Log epoch and max accuracy to wandb
         if args.wandb:
             import wandb
-            wandb.log({
+            log_dict = {
                 "epoch": epoch,
-                "test/max_accuracy": max_accuracy
-            })
+                "test/accuracy": test_stats["acc1"],
+                "test/acc5": test_stats["acc5"],
+                "test/loss": test_stats["loss"],
+                "test/max_accuracy": max_accuracy,
+                "train/loss": train_stats.get("loss", 0),
+                "train/lr": train_stats.get("lr", 0),
+                "train/attn_sparsity": attn_target_sparsity,
+                "train/ffn_sparsity": ffn_target_sparsity,
+                "train/mask_changes": mask_changes
+            }
+            
+            # Add zero metrics if available
+            if zero_metrics is not None:
+                log_dict.update({
+                    "pruning/total_weights_zero": zero_metrics['total_weights_zero'],
+                    "pruning/total_grads_zero": zero_metrics['total_grads_zero'],
+                    "pruning/total_masked_weights_zero": zero_metrics['total_masked_weights_zero'],
+                    "pruning/total_masked_grads_zero": zero_metrics['total_masked_grads_zero']
+                })
+            
+            wandb.log(log_dict)
         print(f'  Max accuracy so far: {max_accuracy:.2f}%')
 
         # --- Checkpoint Saving ---

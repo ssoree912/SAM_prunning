@@ -567,6 +567,14 @@ def get_vit_masks_with_two_stage_grouping(model, attn_pruning_rate, ffn_pruning_
     # 마스크 생성
     masks = {}
     
+    # Store zero metrics for returning
+    zero_metrics = {
+        'total_weights_zero': total_weights_zero,
+        'total_grads_zero': total_grads_zero,
+        'total_masked_weights_zero': total_masked_weights_zero,
+        'total_masked_grads_zero': total_masked_grads_zero
+    }
+    
     # 어텐션과 FFN에 대해 별도의 임계값 계산
     attn_cross_head_importances_array = np.array(attn_cross_head_importances)
     ffn_cross_head_importances_array = np.array(ffn_cross_head_importances)
@@ -642,7 +650,7 @@ def get_vit_masks_with_two_stage_grouping(model, attn_pruning_rate, ffn_pruning_
                 output_module = next(m for n, m in model.named_modules() if n == fc2_name)
                 masks[fc2_name] = np.tile(ffn_mask[:, np.newaxis], (1, output_module.out_features)).T
     
-    return masks
+    return masks, zero_metrics
 
 
 

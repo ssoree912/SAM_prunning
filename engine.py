@@ -361,6 +361,7 @@ def train_one_epoch(model, criterion, data_loader, optimizer, device, epoch, los
     print_freq = 100
     attn_target_sparsity = 0
     ffn_target_sparsity = 0
+    zero_metrics = None
     
     if args.cosub:
         criterion = torch.nn.BCEWithLogitsLoss()
@@ -469,7 +470,7 @@ def train_one_epoch(model, criterion, data_loader, optimizer, device, epoch, los
             if i % args.prune_freq == 0:
                 # 이제 별도의 프루닝 비율로 마스크 적용
                 if args.method == 'ours':
-                    masks = pruning.get_vit_masks_with_two_stage_grouping(
+                    masks, zero_metrics = pruning.get_vit_masks_with_two_stage_grouping(
                         model, 
                         attn_target_sparsity, 
                         ffn_target_sparsity, 
@@ -560,7 +561,7 @@ def train_one_epoch(model, criterion, data_loader, optimizer, device, epoch, los
     metric_logger.synchronize_between_processes()
     print('Mask changes:', mask_changes) 
     print("Averaged stats:", metric_logger)
-    return {k: meter.global_avg for k, meter in metric_logger.meters.items()}, attn_target_sparsity, ffn_target_sparsity, iteration, prev_masks, mask_changes
+    return {k: meter.global_avg for k, meter in metric_logger.meters.items()}, attn_target_sparsity, ffn_target_sparsity, iteration, prev_masks, mask_changes, zero_metrics
 
 
 
@@ -603,6 +604,7 @@ def train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, device, ep
     print_freq = 100
     attn_target_sparsity = 0
     ffn_target_sparsity = 0
+    zero_metrics = None
     
 
     metric_logger = MetricLogger(delimiter="  ")
@@ -803,7 +805,7 @@ def train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, device, ep
     metric_logger.synchronize_between_processes()
     print('Mask changes:', mask_changes) 
     print("Averaged stats:", metric_logger)
-    return {k: meter.global_avg for k, meter in metric_logger.meters.items()}, attn_target_sparsity, ffn_target_sparsity, iteration, prev_masks, mask_changes
+    return {k: meter.global_avg for k, meter in metric_logger.meters.items()}, attn_target_sparsity, ffn_target_sparsity, iteration, prev_masks, mask_changes, zero_metrics
 
 
 def fine_train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, device, epoch, loss_scaler,
