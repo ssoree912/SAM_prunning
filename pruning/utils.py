@@ -462,9 +462,9 @@ def get_vit_masks_with_two_stage_grouping(model, attn_pruning_rate, ffn_pruning_
     for name, module in model.named_modules():
         if isinstance(module, MaskLinear):
             weight = module.weight
-            grad = module.weight.grad if mag_type == 'grad' else None
+            grad = module.weight.grad if module.weight.grad is not None else torch.zeros_like(module.weight)
             masked_weight = module.weight * module.mask
-            masked_grad = module.weight.grad * module.mask
+            masked_grad = grad * module.mask
             
             total_masked_weights_zero += (masked_weight == 0).sum().item()
             total_masked_grads_zero += (masked_grad == 0).sum().item()

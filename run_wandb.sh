@@ -3,14 +3,6 @@
 # CUDA 환경 설정
 export CUDA_VISIBLE_DEVICES=0
 
-# Wandb 로그인 확인
-echo "Checking wandb login status..."
-if ! wandb status | grep -q "Logged in"; then
-    echo "Please login to wandb first:"
-    echo "wandb login"
-    exit 1
-fi
-
 # 실험 설정
 MODEL_SIZE=${1:-small}
 PRUNE_RATE=${2:-0.3}

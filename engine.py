@@ -203,7 +203,7 @@ def fine_train_one_epoch(model: torch.nn.Module, criterion:torch.nn.CrossEntropy
 
         mask_dict = get_mask_dict(model)
         optimizer.first_step(zero_grad=True, mask_dict=mask_dict) #① w ← w + ε
-        with torch.cuda.amp.autocast():
+        with torch.amp.autocast('cuda'):
            outputs = model(samples[:, 0, ...]) # ② w+ε에서 손실/그라디언트
            if not args.cosub:
                cls_loss = criterion(outputs, targets)
@@ -270,7 +270,7 @@ def fine_evaluate(data_loader, model, device):
         images = images.to(device, non_blocking=True)
         target = target.to(device, non_blocking=True)
 
-        with torch.cuda.amp.autocast():
+        with torch.amp.autocast('cuda'):
             output = model(images)  
             loss = criterion(output, target)
 
@@ -296,13 +296,13 @@ def evaluate(data_loader, model, device):
         model.module.set_all_type_values(0)
     else:
         model.set_all_type_values(0)
-    print("et_all_type_values == 0 으로ㅓ 성ㄹ정")
+    print("set_all_type_values == 0 으로 설정")
     
     for images, target in metric_logger.log_every(data_loader, 10, header):
         images = images.to(device, non_blocking=True)
         target = target.to(device, non_blocking=True)
 
-        with torch.cuda.amp.autocast():
+        with torch.amp.autocast('cuda'):
             # output, _ = model(images)  # 두 번째 반환값 무시
             output = model(images)  # 두 번째 반환값 무시
             loss = criterion(output, target)
@@ -329,7 +329,7 @@ def comp_evaluate(data_loader, model, device):
         images = images.to(device, non_blocking=True)
         target = target.to(device, non_blocking=True)
 
-        with torch.cuda.amp.autocast():
+        with torch.amp.autocast('cuda'):
             output = model(images)  # 두 번째 반환값 무시
             loss = criterion(output, target)
 
@@ -397,7 +397,7 @@ def train_one_epoch(model, criterion, data_loader, optimizer, device, epoch, los
         optimizer.first_step(zero_grad=True, mask_dict=mask_dict) 
         #print("first step 실 행됨")
         # 순방향 전파 및 손실 계산
-        # with torch.cuda.amp.autocast():
+        # with torch.amp.autocast('cuda'):
 
         
         with torch.amp.autocast('cuda'):
@@ -695,7 +695,7 @@ def train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, device, ep
         mask_dict = get_mask_dict(model)
         optimizer.first_step(zero_grad=True, mask_dict=mask_dict) #가중치 섭동
 
-        with torch.cuda.amp.autocast():
+        with torch.amp.autocast('cuda'):
             #####################이제 전체 배치에 대해(이전 배치의 새로운 뷰 + 현재 배치의 뷰 0
             pre_samples, pre_targets = pre_data
             all_samples = torch.cat((pre_samples[:, 1, ...], samples[:, 0, ...]), dim=0) #이전샘플의 현재 view 에서 
@@ -864,7 +864,7 @@ def fine_train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, devic
         mask_dict = get_mask_dict(model)
         optimizer.first_step(zero_grad=True, mask_dict=mask_dict) #가중치 섭동
         
-        with torch.cuda.amp.autocast():
+        with torch.amp.autocast('cuda'):
             #####################이제 전체 배치에 대해(이전 배치의 새로운 뷰 + 현재 배치의 뷰 0
             pre_samples, pre_targets = pre_data
             all_samples = torch.cat((pre_samples[:, 1, ...], samples[:, 0, ...]), dim=0) #이전샘플의 현재 view 에서 
