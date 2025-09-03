@@ -249,7 +249,11 @@ def fine_evaluate(data_loader, model, device):
     metric_logger = MetricLogger(delimiter="  ")
     header = 'Test:'
     model.eval()
-    model.module.set_all_type_values(0)
+    # Handle both distributed and non-distributed models
+    if hasattr(model, 'module'):
+        model.module.set_all_type_values(0)
+    else:
+        model.set_all_type_values(0)
     print("et_all_type_values == 0 으로ㅓ 성ㄹ정")
     
     for images, target in metric_logger.log_every(data_loader, 10, header):
@@ -277,7 +281,11 @@ def evaluate(data_loader, model, device):
     metric_logger = MetricLogger(delimiter="  ")
     header = 'Test:'
     model.eval()
-    model.module.set_all_type_values(0)
+    # Handle both distributed and non-distributed models
+    if hasattr(model, 'module'):
+        model.module.set_all_type_values(0)
+    else:
+        model.set_all_type_values(0)
     print("et_all_type_values == 0 으로ㅓ 성ㄹ정")
     
     for images, target in metric_logger.log_every(data_loader, 10, header):
@@ -370,7 +378,11 @@ def train_one_epoch(model, criterion, data_loader, optimizer, device, epoch, los
 
         if epoch == args.target_epoch:
             print("epoch == args.target_epoch이라 0으로 변경함 타겟 에포크:50 이하일땐 나오면 안됨")
-            model.module.set_all_type_values(0)
+            # Handle both distributed and non-distributed models
+    if hasattr(model, 'module'):
+        model.module.set_all_type_values(0)
+    else:
+        model.set_all_type_values(0)
 
 
 
@@ -641,7 +653,11 @@ def train_one_epoch_DLB_test(model,criterion, data_loader, optimizer, device, ep
                 ffn_target_sparsity = args.ffn_prune_rate
             
 
-        if epoch == args.target_epoch: model.module.set_all_type_values(0)
+        if epoch == args.target_epoch: 
+            if hasattr(model, 'module'):
+                model.module.set_all_type_values(0)
+            else:
+                model.set_all_type_values(0)
 
         # ========================================================================
         # 1. 첫 번째 스텝 (Bootstrapping)

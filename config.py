@@ -22,7 +22,7 @@ def get_train_args():
                          help='magnitude type : weight, grad')
     parser.add_argument('--model_size', dest='model_size', default='tiny', type=str,
                          help='Importance Method : tiny,small,base')
-    parser.add_argument('--cu_num', default='1', type=str)
+    parser.add_argument('--cu_num', default='0', type=str)
     parser.add_argument('--warmup', default=1, type=int,
                          help='warmup epoch ')
     parser.add_argument('--target_epoch', default=70, type=int,
